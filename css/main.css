@@ -103,36 +103,93 @@ textarea {
 body {
   font-family: 'Lora', serif;
   line-height: 1.75em;
-  padding: 2rem;
+  color: #292C34;
 }
 
 .center-wrap {
+  padding: 2rem;
   max-width: 55rem;
   margin: auto;
 }
 
-/* TYPOGRAPHY */
-
-p {
-  padding: 1em 0;
+.hero {
+  height: 100vh;
 }
 
-h1 {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width {
+  width: 100vw;
+}
+
+.down-arrow {
+  border: solid black;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 1rem;
+  margin: 1rem;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  align-self: flex-end;
+}
+
+/* TYPOGRAPHY */
+
+main p {
+  padding: .5em 0;
+  font-size: 2em;
+  line-height: 1.75em;
+}
+
+h1, h2 {
   font-family: 'Coustard', serif;
-  font-size: 8em;
   line-height: 1.15em;
   text-align: center;
 }
 
+h1 {
+  font-size: 8em;
+  margin: auto;
+}
+
+h2 {
+  font-size: 3em;
+}
+
 /* WIDGET TRIGGERS */
+
+.widget-trigger {
+  font-weight: bolder;
+}
 
 .widget-trigger:focus,
 .widget-trigger:hover {
   font-weight: 900;
+  color: #4C9E7A;
 }
 
 /* WIDGETS */
 
+.widget {
+  background-color: #999;
+  color: white;
+  margin: 1rem 0;
+  padding: 2em 1em;
+  /* height: 0;
+  font-size: 0; */
+}
+
+.widget.on-hover {
+  height: auto;
+}
+
+.widget h2.on-hover {
+  padding: 2em 1em;
+}
 
 
 /* ==========================================================================
