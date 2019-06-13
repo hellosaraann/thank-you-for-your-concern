@@ -98,15 +98,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* GENERAL */
+
 body {
   font-family: 'Lora', serif;
   line-height: 1.75em;
   padding: 2rem;
 }
 
-body p {
+.center-wrap {
   max-width: 55rem;
   margin: auto;
+}
+
+/* TYPOGRAPHY */
+
+p {
+  padding: 1em 0;
 }
 
 h1 {
@@ -115,6 +123,17 @@ h1 {
   line-height: 1.15em;
   text-align: center;
 }
+
+/* WIDGET TRIGGERS */
+
+.widget-trigger:focus,
+.widget-trigger:hover {
+  font-weight: 900;
+}
+
+/* WIDGETS */
+
+
 
 /* ==========================================================================
    Helper classes
