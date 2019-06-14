@@ -122,6 +122,10 @@ body {
   justify-content: center;
 }
 
+.container.column {
+  flex-direction: column;
+}
+
 .full-width {
   width: 100vw;
 }
@@ -129,12 +133,11 @@ body {
 .down-arrow {
   border: solid black;
   border-width: 0 10px 10px 0;
-  display: inline-block;
+  display: block;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem auto 3rem auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  align-self: flex-end;
 }
 
 /* TYPOGRAPHY */
