@@ -142,8 +142,8 @@ body {
 
 /* TYPOGRAPHY */
 
-main p {
-  padding: .5em 0;
+main p,
+.widget-trigger {
   font-size: 2em;
   line-height: 1.75em;
 }
@@ -181,17 +181,32 @@ h2 {
   background-color: #999;
   color: white;
   margin: 1rem 0;
-  padding: 2em 1em;
-  /* height: 0;
-  font-size: 0; */
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  opacity: 0;
+  transition: height 2s ease-out 1s, opacity 2s ease-out 1s, padding 2s ease-in 1s;
 }
 
-.widget.on-hover {
-  height: auto;
+.widget-trigger {
+  display: block;
+  width: 100vw;
 }
 
-.widget h2.on-hover {
-  padding: 2em 1em;
+.widget-trigger:hover,
+.widget-trigger:focus {
+  font-weight: bolder;
+}
+
+.widget-trigger:hover + .widget,
+.widget-trigger:focus + .widget,
+.widget:hover,
+.widget:focus {
+    height: 20em;
+    padding: 4em;
+    opacity: 1;
+    transition: opacity 2s ease-in-out .25s;
 }
 
 
