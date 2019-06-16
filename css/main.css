@@ -103,8 +103,9 @@ textarea {
 body {
   font-family: 'Lora', serif;
   line-height: 1.75em;
-  color: #292C34;
+  color: #151E3D;
   scroll-behavior: smooth;
+  background-color: #EFEEE1;
 }
 
 .center-wrap {
@@ -115,6 +116,8 @@ body {
 
 .hero {
   height: 100vh;
+  background-color: #293a80;
+  color: #EFEEE1;
 }
 
 .container {
@@ -132,7 +135,7 @@ body {
 }
 
 .down-arrow {
-  border: solid black;
+  border: solid #EFEEE1;
   border-width: 0 10px 10px 0;
   display: block;
   padding: 1rem;
@@ -208,7 +211,7 @@ p.timeline-descriptors {
 .widget {
   box-sizing: border-box;
   background-color: #999;
-  color: white;
+  color: #EFEEE2;
   height: 0;
   padding: 0;
   width: 100%;
@@ -236,6 +239,7 @@ p.timeline-descriptors {
   justify-content: flex-start;
   padding: 0 5em;
   overflow-x: auto;
+  background-color: #EF7240;
 }
 
 .horizontal-scrolling-section::-webkit-scrollbar {
@@ -256,7 +260,8 @@ button {
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: .15em;
-  background-color: #EFEEE0;
+  background-color: #EF7240;
+  color: #E9FEE8;
   padding: 1em 2em;
   border: 0;
   border-radius: 1em;
@@ -287,7 +292,7 @@ button {
   margin: .5em;
   width: 15px;
   height: 15px;
-  border: 5px solid #EFEEE0;
+  border: .5px solid #E9FEE8;
   border-radius: 1em;
   cursor: pointer;
   display: flex;
@@ -296,8 +301,8 @@ button {
 }
 
 .card.unselected {
-  background-color: #EFEEE0;
-  color: #292C34;
+  background-color: #F4E5B4;
+  color: #151E3D;
 }
 
 .card h2 {
@@ -309,65 +314,64 @@ button {
 /* CARDS when revealed */
 
 .red {
-  background-color: #E53022;
-  color: #E53022;
+  background-color: #C8C7C1;
+  color: #C8C7C1;
 }
 
 .orange {
-  background-color: #E28E3A;
-  color: #E28E3A;
+  background-color: #EF7240;
+  color: #EF7240;
 }
 
 .yellow {
-  background-color: #F1D36D;
-  color: #F1D36D;
+  background-color: #F4E5B4;
+  color: #F4E5B4;
 }
 
 .green {
-  background-color: #4C9E7A;
-  color: #4C9E7A;
+  background-color: #E9FEE8;
+  color: #E9FEE8;
 }
 
 .blue {
-  background-color: #2E667F;
-  color: #2E667F;
+  background-color: #2A3B7B;
+  color: #2A3B7B;
 }
 
 .purple {
-  background-color: #86367A;
-  color: #86367A;
+  background-color: #603B5D;
+  color: #603B5D;
 }
 
 .black {
-  background-color: #1A222D;
-  color: #1A222D;
+  background-color: #151E3D;
+  color: #151E3D;
 }
 
 .brown {
-  background-color: #863129;
-  color: #863129;
+  background-color: #391915;
+  color: #391915;
 }
 
 .matched {
-  border: 5px dotted #EFEEE0;
   color: #EFEEE0;
-  animation: pulse .75s ease-in 0s;
+  animation: pulse .5s ease-in 0s;
   text-shadow: -2px 2px 5px #D2352F;
 
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1.15);
-  }
-  10% {
-    transform: scale(1.25);
+    transform: scale(1);
   }
   25% {
     transform: scale(1.15);
   }
-  50% {
-    transform: scale(1.25);
+  30% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);

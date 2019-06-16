@@ -161,7 +161,7 @@ var vm = new Vue ({
         // compares colors of selectedCards and adds to matchedCards if a match
           if (this.selectedCards[0].color === this.selectedCards[1].color) {
               this.selectedCards[0].text = this.selectedCards[1].text =
-                'yay';
+                '';
               this.selectedCards[0].selected = this.selectedCards[1].selected= 'matched';
               this.matchedCards.push(this.selectedCards[0], this.selectedCards[1]);
               this.selectedCards.pop();
@@ -189,7 +189,7 @@ var vm = new Vue ({
         }
       },
       winner: function(){
-            alert('You did it! Everyone is very proud of you.');
+            alert('Bravo!');
       }
   },
   created: function(){
@@ -200,7 +200,7 @@ var vm = new Vue ({
 
 
 
-// GAME APP
+// GAME APP in case I need separate vm later on
 
 /*
 APP FUNCTIONS
