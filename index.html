@@ -73,42 +73,37 @@
       <p class='center-wrap'>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
-      <div class='container center-wrap'>
-        <p>Sentence regarding game.</p>
+      <p class='center-wrap'>Match the facts.</p>
+      <div class='fixed-widget container column center-wrap' id='gameWidget'>
+        <div class='container card-game'>
+          <single-card
+            v-for='(card, index, selected) in cards'
+            v-bind:text='card.text'
+            v-bind:index='card.index'
+            v-bind:class='{
+              unselected: card.selected === "unselected",
+              matched: card.selected === "matched",
+              winning: card.winning === true,
+              mismatch: card.text ==="X",
+              red: card.color === "red",
+              orange: card.color === "orange",
+              yellow: card.color === "yellow",
+              green: card.color === "green",
+              blue: card.color === "blue",
+              purple: card.color === "purple",
+              black: card.color === "black",
+              brown: card.color === "brown"
+            }'
+            v-on:click.native='displayCard(card)'
+          ></single-card>
+        </div>
         <button type="button"
-                label="Shuffle Cards"
                 id='shuffleButton'
-                v-on:click='window.location.reload(true)'
-                class='center-wrap'>
-                New Game
+                v-on:click='window.location.reload(true)'>
+                Refresh
         </button>
       </div>
 
-      <div class='fixed-widget container center-wrap' id='gameWidget'>
-          <div class='game-container card-game'>
-            <single-card
-              v-for='(card, index, selected) in cards'
-              v-bind:text='card.text'
-              v-bind:index='card.index'
-              v-bind:class='{
-                unselected: card.selected === "unselected",
-                matched: card.selected === "matched",
-                winning: card.winning === true,
-                mismatch: card.text ==="X",
-                red: card.color === "red",
-                orange: card.color === "orange",
-                yellow: card.color === "yellow",
-                green: card.color === "green",
-                blue: card.color === "blue",
-                purple: card.color === "purple",
-                black: card.color === "black",
-                brown: card.color === "brown"
-              }'
-              v-on:click.native='displayCard(card)'
-            ></single-card>
-          </div>
-
-      </div>
 
     <p class='center-wrap'>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

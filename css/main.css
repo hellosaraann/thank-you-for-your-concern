@@ -251,46 +251,32 @@ p.timeline-descriptors {
 /* GAME WIDGET */
 
 button {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  font-size: .75em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .15em;
   background-color: #EFEEE0;
-  color: #E23A5A;
-  padding: 1em 1.75em;
+  padding: 1em 2em;
+  border: 0;
   border-radius: 1em;
-  box-shadow: -5px 5px 5px #D2352F;
-  margin: 5em 1em;
+  margin: 5em 0 2em 0;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 
 /* STRUCTURE */
 
-.game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.game-container.full {
-  padding: 2rem;
-  height: 100vh;
-  flex-wrap: nowrap;
-}
-
-.game-container.info {
-  width: 50%;
-  max-width: 25rem;
-  padding: 1rem;
+.container.info {
+  justify-content: space-between;
 }
 
 .container.card-game {
-  width: 50%;
+  width: 60%;
   max-width: 600px;
   height: auto;
+  flex-wrap: wrap;
 }
 
 /* CARDS */
@@ -303,7 +289,6 @@ button {
   height: 15px;
   border: 5px solid #EFEEE0;
   border-radius: 1em;
-  box-shadow: -5px 5px 5px #D2352F;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -312,7 +297,7 @@ button {
 
 .card.unselected {
   background-color: #EFEEE0;
-  color: #E23A5A;
+  color: #292C34;
 }
 
 .card h2 {
