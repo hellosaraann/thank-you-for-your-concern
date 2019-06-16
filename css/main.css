@@ -163,52 +163,85 @@ h2 {
   font-size: 3em;
 }
 
+/* TYPOGRAPHY — TIMELINE */
+
+h2.timeline-image-placeholder {
+  font-size: 10rem;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+h4.timeline-year {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  line-height: 1em;
+  padding: .5em;
+  margin: .5em;
+}
+
+p.timeline-descriptors {
+  font-size: 1.2em;
+  line-height: 1.25em;
+  padding: 1em;
+  margin: .5em 1em;
+}
+
 /* WIDGET TRIGGERS */
 
 .widget-trigger {
   font-weight: bolder;
+  display: block;
+  width: 100vw;
+  position: sticky;
 }
 
 .widget-trigger:focus,
 .widget-trigger:hover {
   font-weight: 900;
-  color: #4C9E7A;
 }
 
 /* WIDGETS */
 
 .widget {
+  box-sizing: border-box;
   background-color: #999;
   color: white;
-  margin: 1rem 0;
   height: 0;
-  overflow: hidden;
   padding: 0;
   width: 100%;
   opacity: 0;
-  transition: height 2s ease-out 1s, opacity 2s ease-out 1s, padding 2s ease-in 1s;
-}
-
-.widget-trigger {
-  display: block;
-  width: 100vw;
-}
-
-.widget-trigger:hover,
-.widget-trigger:focus {
-  font-weight: bolder;
+  transition: height 2s ease-out 1s, opacity 3s ease-out .5s, padding 2s ease-out .5s;
 }
 
 .widget-trigger:hover + .widget,
 .widget-trigger:focus + .widget,
 .widget:hover,
 .widget:focus {
-    height: 20em;
+    height: 40em;
     padding: 4em;
     opacity: 1;
     transition: opacity 2s ease-in-out .25s;
 }
 
+/* TIMELINE WIDGET */
+
+.horizontal-scrolling-section {
+  justify-content: flex-start;
+  padding: 0 5em;
+  overflow-x: auto;
+}
+
+.horizontal-scrolling-section::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll {
+  min-width: 25em;
+  padding: 2em;
+  margin: 2em;
+}
 
 /* ==========================================================================
    Helper classes
