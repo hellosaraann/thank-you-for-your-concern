@@ -123,7 +123,7 @@ Vue.component ( 'single-card', {
 	],
 	template: `
 		<div class='card'>
-			<h2>{{ text }}</h2>
+			<h3>{{ text }}</h3>
 		</div>
 	`
 });

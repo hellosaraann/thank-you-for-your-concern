@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Coustard:900|Lora|Raleway&display=swap" rel="stylesheet">
 
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -28,7 +29,7 @@
   <header>
   </header>
 
-  <div class='hero container column'>
+  <div class='hero container column full-width'>
     <h1 class='center-wrap'>Thank you for your concern.</h1>
     <div class='down-arrow'></div>
   </div>
@@ -72,7 +73,8 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       <h2 class='center-wrap'>Match the facts.</h2>
-      <div class='fixed-widget container column center-wrap' id='gameWidget'>
+
+      <div class='fixed-widget container column center-wrap'>
         <div class='container card-game'>
           <single-card
             v-for='(card, index, selected) in cards'
@@ -101,7 +103,7 @@
                 Refresh
         </button>
       </div>
-
+    </div>
 
     <p class='center-wrap'>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -109,11 +111,8 @@
     <a class='widget-trigger center-wrap' id='story-trigger'>
       <h2>Story.</h2>
     </a>
-    <div class='expanding-widget' id='storyWidget'>
-      <h2>
-        This will be a story.
-        <br />(placeholder)
-      </h2>
+    <div class='expanding-widget container' id='storyWidget'>
+      <h2><a href='#' class='link-dk-bg'><i class="fas fa-play icon-large"></i></a></h2>
     </div>
 
   </main>
@@ -124,6 +123,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/f81eb636bb.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

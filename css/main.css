@@ -105,19 +105,24 @@ body {
   line-height: 1.75em;
   color: #151E3D;
   scroll-behavior: smooth;
-  background-color: #EFEEE1;
+  background-color: #EFEEE2;
+  overflow-x: hidden;
 }
 
 .center-wrap {
-  padding: 2rem;
-  max-width: 55rem;
   margin: auto;
+  width: 60%;
+  max-width: 55rem;
 }
 
 .hero {
+  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
+  background-size: cover;
   background-color: #293a80;
   color: #EFEEE1;
+  margin-bottom: 5rem;
 }
 
 .container {
@@ -132,6 +137,9 @@ body {
 
 .full-width {
   width: 100vw;
+  max-width: 100%;
+  min-width: 100vw;
+  margin: auto;
 }
 
 .down-arrow {
@@ -150,6 +158,8 @@ main p,
 .widget-trigger {
   font-size: 2em;
   line-height: 1.75em;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 h1, h2 {
@@ -164,7 +174,13 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 4rem;
+  padding-top: .25em;
+  margin-bottom: 0;
+}
+
+a.link-dk-bg {
+  color: #E9FEE8;
 }
 
 /* TYPOGRAPHY — TIMELINE */
@@ -192,12 +208,18 @@ p.timeline-descriptors {
   margin: .5em 1em;
 }
 
+/* TYPOGRAPHY — GAME */
+
+#gameApp h2 {
+  margin-top: 1em;
+}
+
 /* WIDGET TRIGGERS */
 
 .widget-trigger {
   font-weight: bolder;
   display: block;
-  width: 100vw;
+  width: 100%;
   position: sticky;
 }
 
@@ -231,13 +253,15 @@ p.timeline-descriptors {
 
 .fixed-widget {
   height: auto;
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 /* TIMELINE WIDGET */
 
 .horizontal-scrolling-section {
   justify-content: flex-start;
-  padding: 0 5em;
+  padding: .5em 5em;
   overflow-x: auto;
   background-color: #EF7240;
 }
@@ -278,8 +302,7 @@ button {
 }
 
 .container.card-game {
-  width: 60%;
-  max-width: 600px;
+  width: 400px;
   height: auto;
   flex-wrap: wrap;
 }
@@ -305,10 +328,9 @@ button {
   color: #151E3D;
 }
 
-.card h2 {
+.card h3 {
   text-align: center;
   margin: 0 auto;
-
 }
 
 /* CARDS when revealed */
@@ -384,6 +406,15 @@ button {
 
 .winning {
   animation: pulse .75s 0s infinite ease-in;
+}
+
+/* STORY SECTION */
+
+.expanding-widget {
+  background-color: #603B5D;
+  color: #EFEEE2;
+  padding: 4em;
+  height: 40vh;;
 }
 
 
@@ -476,8 +507,193 @@ button {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* MEDIA QUERIES */
+
+/* laptops and large tablets */
+@media all and (max-width: 1399px) {
+
+ .hidden-l {
+   visibility: hidden;
+ }
+
+ .hidden-s {
+   visibility: visible;
+ }
+
+}
+
+
+/* large tablets */
+@media all and (max-width: 1024px) {
+
+  /* TYPOGRAPHY */
+
+h1 {
+  font-size: 6.5em;
+}
+
+main p,
+.widget-trigger {
+  font-size: 1.2rem;
+  line-height: 1.75em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.center-wrap: {
+  margin: auto;
+  width: 75vw;
+}
+
+   /* side nav media size changes to header-nav
+
+   .hamburger,
+   .closebtn {
+     cursor: pointer;
+   }
+
+   .header-nav ul ul:before {
+      border-color: transparent;
+      content: none;
+    }
+
+   .header-nav {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      z-index: 150;
+      top: 0;
+      right: 0;
+      margin: 0;
+      background-color: white;
+      border-left: 1px solid #FAD642;
+      border-top: 1px solid #FAD642;
+      border-bottom: 1px solid #FAD642;
+      overflow-x: hidden;
+      padding-top: 2em;
+      transition: 0.5s;
+   }
+
+   .header-nav nav {
+     right: 0;
+     position: absolute;
+     top: 20rem;
+   }
+
+   .header-nav ul {
+     list-style: none;
+   }
+
+   .header-nav li {
+     display: block;
+     width: 100%;
+     padding: .75em;
+   }
+
+   li.parent-drop-down ul {
+     visibility: visible;
+     position: static;
+     border: 0;
+   }
+
+   .closebtn {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 3rem;
+      z-index: 200;
+   }
+
+   .closebtn a:hover,
+   .closebtn a:focus {
+     color: #431E1D;
+     border: 0;
+   }
+
+ */
+}
+
+/* large smartphones & tablets */
+@media all and (max-width: 775px) {
+
+  h1 {
+    font-size: 6em;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  .center-wrap {
+    width: 85vw;
+    margin: auto;
+  }
+
+}
+
+
+/* smartphones */
+@media all and (max-width: 575px) {
+
+  .down-arrow {
+    border: 0;
+    border-width: 0;
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+    padding: 1em 0;
+  }
+
+  .hero {
+    height: auto;
+
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  main p,
+  .widget-trigger {
+    font-size: 1rem;
+    line-height: 1.75em;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .center-wrap {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .container.card-game {
+    width: 300px;
+    height: auto;
+  }
+
+}
+
+/* smartphones */
+@media all and (max-width: 400px) {
+
+  body{
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .container.card-game {
+    width: 300px;
+    height: auto;
+  }
+
 }
 
 @media print,
