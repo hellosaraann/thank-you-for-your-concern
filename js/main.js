@@ -7,64 +7,79 @@ const widgetArray = [
 
 const timelineArray = [{
     id: 1,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    timelinePhoto: '',
+    year: '3000s BCE',
+    text: 'The earliest record of abortion appears in the Royal Archives of China. [4000yrs]'
   },{
     id: 2,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: '',
+    year: '1850s–1500s BCE',
+    text: 'Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides. [4000yrs - needs editing]'
   },{
     id: 3,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'img/fragment_of_Hippocratic_oath.png',
+    year: '400s BCE',
+    text: 'The Hippocratic Oath was written in Ancient Greece, where abortions were legal. Sources disagree on whether the original text vowed not to give women "an abortive pessary" or "a destructive pessary", alluding to the dangerous infections caused by a soaked piece of wool. After the fall of Greece and the school of Hippocrates, the Oath was rediscovered by Christian scholars and began to be used again in 1508CE. By 1750, it had been translated into European languages and was widely recited. [ASCO] '
   },{
     id: 4,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'img/coin-silphium-cyrenne.png',
+    year: '300s BCE',
+    text: 'Philosophers like Plato and Aristotle write openly about birth control and contraceptives. Use of contraceptive and abortive herbs, silphium, birthwort, and "the chaste tree" is well documented in Ancient Greece, Egypt, and Northern Africa. Exports of silphium make the African colony Cyrenne rich, and eventually turn the plant extinct. [4000yrs]'
   },{
     id: 5,
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: 'year',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   },{
     id: 6,
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: 'year',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   },{
     id: 7,
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: 'year',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   },{
     id: 8,
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: 'year',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   },{
     id: 9,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'img/horatio-storer-american-medical-association.jpg',
+    year: 1857,
+    text: 'Dr. Horatio Storer, the "father of American gynecology" successfully lobbies the decade-old American Medical Association to denounce the previously legal practice of abortion. [1] "We are the physical guardians of women," he says in an 1859 report [12]. The same man penned a paper entitled "The Origins of Insanity in Women" in 1865, in which he advocates for ovariotomies for anything from shoplifting to "self-indulgent" behavior in women to "remove the cause". Storer\'s 1859 report on the criminality of abortion becomes the AMA\'s official policy until 1967. [11]'
   },{
     id: 10,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
+    year: 1869,
+    text: 'The Catholic Church condemns abortion for all stages of pregnancy. Previously abortion before "ensoulment of the fetus" at "thirty days after conception" was not thought to be a sin. [4000yrs - needs editing]'
   },{
     id: 11,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'img/anthony-comstock-law-1873.jpg',
+    year: 1873,
+    text: 'The “Comstock Law” criminalized contraception and abortion, and information in the United States, except when a physician deemed either was necessary. With the passage of this law, women lost what had been their common law right. [4000yrs - needs editing]'
   },{
     id: 12,
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: 'year',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   },{
     id: 13,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
+    year: '1930s',
+    text: 'The American Birth Control League was started by Margaret Sanger and quickly grew to over 500 birth control clinics throughout the United States. Abortions in the United States increased with economic pressures to over 681,000 each year inciting many physicians to become abortion specialists. In addition to numerous physicians in New York City, and underground clinics were established on the West Coast. During the Depression era, contraceptive devices and condoms became ever more socially acceptable and were commonly available at pharmacies and gas stations. The United States had one of the highest maternal mortality rates in the world with induced abortions responsible for at least 14% of deaths. [4000yrs - needs editing]'
   },{
     id: 14,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'img/roe-v-wade-norma-mccorvey-gloria-allred.jpg',
+    year: 1973,
+    text: 'Passed on January 22nd, Roe v Wade affirmed that the right of privacy protected under the 14th Amendment to the Constitution included “a woman’s decision whether or not to terminate her pregnancy.” [CNN, 4000yrs]'
   },{
     id: 15,
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    timelinePhoto: 'img/henry-hyde-hyde-amendment.jpg',
+    year: 1976,
+    text: 'The Hyde Amendment blocks federal Medicaid funding for abortions, making obtaining an abortion very difficult for those with lower income, predominantly half of which are women of color. Just a year later, on October 3rd, 1977, young mother and student Rosie Jiménez dies in Texas from an illegal abortion. She didn\'t have the financial means to obtain undergo a safe procedure.[texas observer]'
   }
 ];
 
@@ -100,11 +115,13 @@ TIMELINE ENTRY COMPONENT
 
 Vue.component ( 'timeline-entry', {
 	props: [
-		'events', 'id', 'text', 'year'
+		'events', 'timelinePhoto', 'text', 'year'
 	],
 	template: `
 			<div class='container column horizontal-scroll'>
-				<h2 class='timeline-image-placeholder'>{{ id }}</h2>
+				<div class='timeline-image-placeholder'>
+          <img v-bind:src='timelinePhoto' class='photo'/>
+        </div>
         <h4 class='timeline-year'>{{ year }}</h4>
 				<p class='timeline-descriptors'>{{ text }}</p>
 			</div>
@@ -143,7 +160,7 @@ var vm = new Vue ({
       if (this.matchedCards.length === this.cards.length){
         for (let i = 0; i <  this.cards.length; i++){
           this.cards[i].winning = true;
-        };
+        }
         setTimeout(function(){
           this.winner();
         }.bind(this), 500);
@@ -154,8 +171,8 @@ var vm = new Vue ({
       shuffleCards: function() {
         // used by page refresh and new game button to make card order random
         this.cards.sort(function(){
-        return 0.5 - Math.random()
-        })
+        return 0.5 - Math.random();
+      });
       },
       compareCards: function(){
         // compares colors of selectedCards and adds to matchedCards if a match
