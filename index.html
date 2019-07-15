@@ -46,13 +46,8 @@
     </div>
 
     <div>
-      <a class='center-wrap'>
-        <h2>You care about us</h2>
-      </a>
-      <div class='fixed-widget'>
-        <picture><img src="img/house-infographic-sketchy.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
-      </div>
       <div class='center-wrap'>
+        <h2>You care about us</h2>
         <blockquote>
           <p>
             We don’t pay enough attention to those things that can be catastrophic for women.
@@ -60,7 +55,12 @@
           <footer>
               Barbara Levy, VP of Health Policy and Advocacy at the American College of Obstetricians and Gynecologists.<sup>10</sup>
           </footer>
-        </blockquote>
+      </div>
+      </blockquote>
+      <div class='fixed-widget'>
+        <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
+      </div>
+      <div class='center-wrap'>
         <p>
           The United States has the highest rising maternal mortality rate of any of the developed nations by far, with American mothers nearly three to seven times more likely to die from causes related to childbirth than other developed nations.<sup>10</sup> Of the Title V program supporting maternal & child health, 78% goes to infants and special needs children, and 6% goes to mothers. Medicaid, while the ACA still stands, covers mothers for 60 days postpartum, and infants one year. In some cases students are allowed to complete their training as maternal-fetal specialists without having even been to the delivery room, such is the focus placed on the child.<sup>9</sup>
         </p>
@@ -77,11 +77,8 @@
       <a class='center-wrap' id='infographic-trigger'>
         <h2>You care about our children</h2>
       </a>
-      <div class='fixed-widget' id='infographicWidget'>
-        <h2>
-          This will be an infographic.
-          <br />(placeholder)
-        </h2>
+      <div class='fixed-widget'>
+        <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
       </div>
       <p class='center-wrap highlight'>
         75% of us are at or below the poverty line. A majority of us make this hard choice because we cannot afford financially to have another child or children. 60% of us already have another child. (Percentage of babies given up for adoption that stay in orphanages?)
@@ -91,8 +88,8 @@
     <div id='gameApp'>
       <h3 class='center-wrap'>Match the facts.</h3>
 
-      <div class='fixed-widget container column center-wrap'>
-        <div class='container card-game'>
+      <div class='fixed-widget container column'>
+        <div class='container card-game center-wrap'>
           <single-card
             v-for='(card, index, selected) in cards'
             v-bind:text='card.text'
