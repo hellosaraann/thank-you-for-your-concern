@@ -85,7 +85,7 @@ const cardArray = [{
     'index': 2 ,
     'issue': 'breast-cancer',
     'text': '?',
-    'cardFace': 'img/matching-breast-cancer-false.png',
+    'cardFace': 'img/matching-breast-cancer-truth.png',
     'selected': 'unselected',
     'winning': false
   },{
@@ -99,10 +99,94 @@ const cardArray = [{
    'index': 4 ,
    'issue': 'federal-funding',
    'text': '?',
-   'cardFace': 'img/matching-federal-funding-false.png',
+   'cardFace': 'img/matching-federal-funding-truth.png',
    'selected': 'unselected',
    'winning': false
-  }];
+  },{
+   'index': 5 ,
+   'issue': 'sex-ed',
+   'text': '?',
+   'cardFace': 'img/matching-sex-ed-truth.png',
+   'selected': 'unselected',
+   'winning': false
+ },{
+   'index': 6 ,
+   'issue': 'sex-ed',
+   'text': '?',
+   'cardFace': 'img/matching-sex-ed-myth.png',
+   'selected': 'unselected',
+   'winning': false
+  },{
+    'index': 7 ,
+    'issue': 'promiscuity',
+    'text': '?',
+    'cardFace': 'img/matching-promiscuity-truth.png',
+    'selected': 'unselected',
+    'winning': false
+   },{
+     'index': 8 ,
+     'issue': 'promiscuity',
+     'text': '?',
+     'cardFace': 'img/matching-promiscuity-stereotype.png',
+     'selected': 'unselected',
+     'winning': false
+    },{
+      'index': 9 ,
+      'issue': 'imagery',
+      'text': '?',
+      'cardFace': 'img/matching-photos-truth.png',
+      'selected': 'unselected',
+      'winning': false
+     },{
+       'index': 10 ,
+       'issue': 'imagery',
+       'text': '?',
+       'cardFace': 'img/matching-photos-myth.png',
+       'selected': 'unselected',
+       'winning': false
+      },{
+        'index': 11 ,
+        'issue': 'good-evil',
+        'text': '?',
+        'cardFace': 'img/matching-good-v-evil-truth.png',
+        'selected': 'unselected',
+        'winning': false
+       },{
+         'index': 12 ,
+         'issue': 'good-evil',
+         'text': '?',
+         'cardFace': 'img/matching-good-v-evil-myth.png',
+         'selected': 'unselected',
+         'winning': false
+        },{
+          'index': 13 ,
+          'issue': 'dangerous',
+          'text': '?',
+          'cardFace': 'img/matching-danger-myth.png',
+          'selected': 'unselected',
+          'winning': false
+         },{
+           'index': 14 ,
+           'issue': 'dangerous',
+           'text': '?',
+           'cardFace': 'img/matching-danger-truth.png',
+           'selected': 'unselected',
+           'winning': false
+          },{
+            'index': 15 ,
+            'issue': 'birth-control',
+            'text': '?',
+            'cardFace': 'img/matching-birth-control-myth.png',
+            'selected': 'unselected',
+            'winning': false
+           },{
+             'index': 16 ,
+             'issue': 'birth-control',
+             'text': '?',
+             'cardFace': 'img/matching-birth-control-truth.png',
+             'selected': 'unselected',
+             'winning': false
+            }];
 
 /*
 TIMELINE ENTRY COMPONENT
@@ -148,7 +232,7 @@ Vue.component ( 'single-card', {
 var vm = new Vue ({
   el: '#widgetApp',
   data: {
-    matchingMessage: 'Click the cards to make a match.',
+    matchingMessage: 'Click two cards at a time to reveal.',
     widgets: widgetArray,
     events: timelineArray,
     cards: cardArray,
@@ -181,7 +265,7 @@ var vm = new Vue ({
               this.selectedCards[0].text = this.selectedCards[1].text =
                 '';
               this.selectedCards[0].selected = this.selectedCards[1].selected= 'matched';
-              this.matchingMessage = 'Great! Keep going.';
+              this.matchingMessage = 'You found a match! Keep going.';
               this.matchedCards.push(this.selectedCards[0], this.selectedCards[1]);
               this.selectedCards.pop();
               this.selectedCards.pop();
@@ -189,13 +273,13 @@ var vm = new Vue ({
             // if not a match, pops both from selectedCards and returns to base values
               this.selectedCards[0].text = this.selectedCards[1].text = 'X';
               setTimeout(function(){
-                    this.matchingMessage = 'Click the cards to make a match.';
+                    this.matchingMessage = 'Click two cards at a time to reveal.';
                     this.selectedCards[0].selected = this.selectedCards[1].selected = 'unselected';
                     this.selectedCards[0].text = this.selectedCards[1].text = '?';
                     this.selectedCards.pop();
                     this.selectedCards.pop();
                     this.cards.disabled = false;
-              }.bind(this), 700);
+              }.bind(this), 2000);
           }
       },
       displayCard: function(cardSelected){
@@ -209,7 +293,7 @@ var vm = new Vue ({
         }
       },
       winner: function(){
-            this.matchingMessage = 'Congratulations! You found all the matches. Thanks so much for playing.';
+            this.matchingMessage = 'Well done. Thank you for taking the time to further explore these complex issues.';
       }
   },
   created: function(){

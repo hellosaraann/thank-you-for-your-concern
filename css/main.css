@@ -98,15 +98,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* GENERAL */
+/* GENERAL STRUCTURE + TYPOGRAPHY */
 
 body {
+  scroll-behavior: smooth;
+  background-color: #EFEEE2;
   font-family: 'Lora', serif;
   font-size: 18px;
   line-height: 1.75em;
   color: #151E3D;
-  scroll-behavior: smooth;
-  background-color: #EFEEE2;
 }
 
 .center-wrap {
@@ -128,23 +128,6 @@ body {
   background-attachment: fixed;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container.column {
-  flex-direction: column;
-}
-
-.full-width {
-  width: 100vw;
-  max-width: 100%;
-  min-width: 100vw;
-  margin: auto;
-}
-
 .down-arrow {
   border: solid #EFEEE1;
   border-width: 0 10px 10px 0;
@@ -156,6 +139,57 @@ body {
 }
 
 /* TYPOGRAPHY */
+
+h1, h2, h4 {
+  font-family: 'Coustard', serif;
+  line-height: 1.15em;
+  text-align: center;
+}
+
+h1 {
+  font-size: 8em;
+  margin: auto;
+  text-shadow: 0 0 15px #39161E;
+}
+
+h2 {
+  font-size: 4rem;
+  padding-top: .25em;
+  margin-bottom: 0;
+}
+
+.side-by-side h2 {
+  text-align: left;
+}
+
+h3, h5, button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  line-height: 1.25em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  letter-spacing: .1em;
+  font-size: 2rem;
+  line-height: 1em;
+  padding: .5rem 0;
+  margin: .5rem 0;
+}
+
+h5, button {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+a.link-dk-bg {
+  color: #E9FEE8;
+}
 
 blockquote p,
 .highlight p {
@@ -194,55 +228,6 @@ blockquote {
   background-size: 60px;
 }
 
-h1, h2 {
-  font-family: 'Coustard', serif;
-  line-height: 1.15em;
-  text-align: center;
-}
-
-h3 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: lighter;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  line-height: 1.25em;
-}
-
-h1 {
-  font-size: 8em;
-  margin: auto;
-  text-shadow: 0 0 15px #39161E;
-}
-
-h2 {
-  font-size: 4rem;
-  padding-top: .25em;
-  margin-bottom: 0;
-}
-
-a.link-dk-bg {
-  color: #E9FEE8;
-}
-
-/* TYPOGRAPHY — TIMELINE */
-
-/* h2.timeline-image-placeholder {
-  font-size: 10rem;
-  line-height: 1em;
-  padding: 0;
-  margin: 0;
-} */
-
-h4.timeline-year {
-  font-family: 'Coustard', serif;
-  letter-spacing: .1em;
-  font-size: 2rem;
-  line-height: 1em;
-  padding: .5rem 0;
-  margin: .5rem 0;
-}
-
 p.timeline-descriptors {
   font-size: 1.2em;
   line-height: 1.25em;
@@ -250,13 +235,12 @@ p.timeline-descriptors {
   margin: .5em 0;
 }
 
-/* TYPOGRAPHY — GAME */
-
 #gameApp h3 {
   margin-top: 1em;
+  color: #151E3D;
 }
 
-/* WIDGET TRIGGERS */
+/* WIDGETS + FLEX CONTAINERS */
 
 .widget-trigger {
   font-weight: bolder;
@@ -270,7 +254,22 @@ p.timeline-descriptors {
   font-weight: 900;
 }
 
-/* WIDGETS & Widget behaviors */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.column {
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100vw;
+  max-width: 100%;
+  min-width: 100vw;
+  margin: auto;
+}
 
 .y.mandatory-scroll-snapping {
   scroll-snap-type: y mandatory;
@@ -302,12 +301,28 @@ p.timeline-descriptors {
   height: auto;
   margin: 2rem 0;
   background-color: #EFEEE3;
-  color: #EFEEE2;
   box-sizing: border-box;
 }
 
 .fixed-widget img {
   width: 100%;
+}
+
+.side-by-side.container {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.side-by-side {
+  margin: 5rem 0;
+  height: 100vh;
+  padding: 5rem;
+  background-color: #161E39;
+  color: #EFEEE3;
+}
+
+.app-info {
+  max-width: 600px;
 }
 
 /* TIMELINE WIDGET */
@@ -336,42 +351,28 @@ p.timeline-descriptors {
   margin: 1rem;
 }
 
-/* GAME WIDGET */
+/* MATCHING GAME WIDGET */
 
 button {
-  font-family: 'Raleway', sans-serif;
-  font-weight: lighter;
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: .15em;
   background-color: #EF7240;
   color: #E9FEE8;
+  margin: 2.5rem 0;
   padding: 1em 2em;
   border: 0;
   border-radius: 1em;
-  margin: 5em 0 2em 0;
   cursor: pointer;
-  align-self: flex-end;
 }
 
-
-/* STRUCTURE */
-
-.container.info {
-  justify-content: space-between;
-}
-
-.container.card-game {
-  width: 800px;
+.card-game {
+  display: flex;
+  width: 80vw;
   height: auto;
   flex-wrap: wrap;
 }
 
-/* CARDS */
-
 .card {
-  height: 200px;
-  width: 200px;
+  width: 180px;
+  height: 180px;
   margin: .5em;
   cursor: pointer;
   display: flex;
@@ -391,6 +392,7 @@ button {
   background-color: #F4E5B4;
   color: #151E3D;
   border-radius: 30px;
+  background-image: url('../img/matching-heart-bg.png');
 }
 
 /* STORY SECTION */
