@@ -6,80 +6,65 @@ const widgetArray = [
 ];
 
 const timelineArray = [{
-    id: 1,
     timelinePhoto: '',
     year: '3000s BCE',
-    text: 'The earliest record of abortion appears in the Royal Archives of China. [4000yrs]'
+    text: 'The earliest record of abortion appears in the Royal Archives of China.',
+    factCite: 1
   },{
-    id: 2,
     timelinePhoto: '',
     year: '1850s–1500s BCE',
-    text: 'Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides. [4000yrs - needs editing]'
+    text: 'Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides.',
+    factCite: 1
   },{
-    id: 3,
     timelinePhoto: 'img/fragment_of_Hippocratic_oath.png',
     year: '400s BCE',
-    text: 'The Hippocratic Oath was written in Ancient Greece, where abortions were legal. Sources disagree on whether the original text vowed not to give women "an abortive pessary" or "a destructive pessary", alluding to the dangerous infections caused by a soaked piece of wool. After the fall of Greece and the school of Hippocrates, the Oath was rediscovered by Christian scholars and began to be used again in 1508CE. By 1750, it had been translated into European languages and was widely recited. [ASCO] '
+    text: 'The Hippocratic Oath was written in Ancient Greece, where abortions were legal. Sources disagree on whether the original text vowed not to give women "an abortive pessary" or "a destructive pessary", alluding to the dangerous infections caused by a soaked piece of wool. After the fall of Greece and the school of Hippocrates, the Oath was rediscovered by Christian scholars and began to be used again in 1508CE. By 1750, it had been translated into European languages and was widely recited.',
+    factCite: 4
   },{
-    id: 4,
     timelinePhoto: 'img/coin-silphium-cyrenne.png',
     year: '300s BCE',
-    text: 'Philosophers like Plato and Aristotle write openly about birth control and contraceptives. Use of contraceptive and abortive herbs, silphium, birthwort, and "the chaste tree" is well documented in Ancient Greece, Egypt, and Northern Africa. Exports of silphium make the African colony Cyrenne rich, and eventually turn the plant extinct. [4000yrs]'
+    text: 'Philosophers like Plato and Aristotle write openly about birth control and contraceptives. Use of contraceptive and abortive herbs, silphium, birthwort, and "the chaste tree" is well documented in Ancient Greece, Egypt, and Northern Africa. Exports of silphium make the African colony Cyrenne rich, and eventually turn the plant extinct. ',
+    factCite: 1
   },{
-    id: 5,
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  },{
-    id: 6,
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  },{
-    id: 7,
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  },{
-    id: 8,
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  },{
-    id: 9,
     timelinePhoto: 'img/horatio-storer-american-medical-association.jpg',
     year: 1857,
-    text: 'Dr. Horatio Storer, the "father of American gynecology" successfully lobbies the decade-old American Medical Association to denounce the previously legal practice of abortion. [1] "We are the physical guardians of women," he says in an 1859 report [12]. The same man penned a paper entitled "The Origins of Insanity in Women" in 1865, in which he advocates for ovariotomies for anything from shoplifting to "self-indulgent" behavior in women to "remove the cause". Storer\'s 1859 report on the criminality of abortion becomes the AMA\'s official policy until 1967. [11]'
+    text: 'Dr. Horatio Storer, the "father of American gynecology" successfully lobbies the decade-old American Medical Association to denounce the previously legal practice of abortion. "We are the physical guardians of women," he says in an 1859 report. The same man penned a paper entitled "The Origins of Insanity in Women" in 1865, in which he advocates for ovariotomies for anything from shoplifting to "self-indulgent" behavior in women to "remove the cause". Storer\'s 1859 report on the criminality of abortion becomes the AMA\'s official policy until 1967.',
+    factCite: '1,11,12'
   },{
-    id: 10,
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
+    timelinePhoto: 'img/Pope_Pius_IX_surrounded_by_clerics.jpg',
     year: 1869,
-    text: 'The Catholic Church condemns abortion for all stages of pregnancy. Previously abortion before "ensoulment of the fetus" at "thirty days after conception" was not thought to be a sin. [4000yrs - needs editing]'
+    text: 'Led by Pope Pius IX, the Catholic Church condemns abortion for all stages of pregnancy. Previously abortion before "ensoulment of the fetus" at "thirty days after conception" was not thought to be a sin.',
+    factCite: '1,17'
   },{
-    id: 11,
     timelinePhoto: 'img/anthony-comstock-law-1873.jpg',
     year: 1873,
-    text: 'The “Comstock Law” criminalized contraception and abortion, and information in the United States, except when a physician deemed either was necessary. With the passage of this law, women lost what had been their common law right. [4000yrs - needs editing]'
+    text: 'The “Comstock Law” criminalized contraception and abortion, and information in the United States, except when a physician deemed either was necessary. With the passage of this law, women lost what had been their common law right.',
+    factCite: 1
   },{
-    id: 12,
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
-    year: 'year',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  },{
-    id: 13,
     timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: '1930s',
-    text: 'The American Birth Control League was started by Margaret Sanger and quickly grew to over 500 birth control clinics throughout the United States. Abortions in the United States increased with economic pressures to over 681,000 each year inciting many physicians to become abortion specialists. In addition to numerous physicians in New York City, and underground clinics were established on the West Coast. During the Depression era, contraceptive devices and condoms became ever more socially acceptable and were commonly available at pharmacies and gas stations. The United States had one of the highest maternal mortality rates in the world with induced abortions responsible for at least 14% of deaths. [4000yrs - needs editing]'
+    text: 'The American Birth Control League was started by Margaret Sanger and quickly grew to over 500 birth control clinics throughout the United States. Abortions in the United States increased with economic pressures to over 681,000 each year inciting many physicians to become abortion specialists. In addition to numerous physicians in New York City, and underground clinics were established on the West Coast. During the Depression era, contraceptive devices and condoms became ever more socially acceptable and were commonly available at pharmacies and gas stations. The United States had one of the highest maternal mortality rates in the world with induced abortions responsible for at least 14% of deaths.',
+    factCite: 1
   },{
-    id: 14,
+    timelinePhoto: 'img/ca-governor-ronald-reagan-and-family.jpg',
+    year: 1967,
+    text: 'Then California Governor Ronald Reagan signs the Therapeutic Abortion Act, one of the most progressive abortion laws of its day.',
+    factCite: 15
+  },{
     timelinePhoto: 'img/roe-v-wade-norma-mccorvey-gloria-allred.jpg',
     year: 1973,
-    text: 'Passed on January 22nd, Roe v Wade affirmed that the right of privacy protected under the 14th Amendment to the Constitution included “a woman’s decision whether or not to terminate her pregnancy.” [CNN, 4000yrs]'
+    text: 'Passed on January 22nd, Roe v Wade affirmed that the right of privacy protected under the 14th Amendment to the Constitution included “a woman’s decision whether or not to terminate her pregnancy.”',
+    factCite: '1,2'
   },{
-    id: 15,
     timelinePhoto: 'img/henry-hyde-hyde-amendment.jpg',
     year: 1976,
-    text: 'The Hyde Amendment blocks federal Medicaid funding for abortions, making obtaining an abortion very difficult for those with lower income, predominantly half of which are women of color. Just a year later, on October 3rd, 1977, young mother and student Rosie Jiménez dies in Texas from an illegal abortion. She didn\'t have the financial means to obtain undergo a safe procedure.[texas observer]'
+    text: 'The Hyde Amendment blocks federal Medicaid funding for abortions, making obtaining an abortion very difficult for those with lower income, predominantly half of which are women of color. Just a year later, on October 3rd, 1977, young mother and student Rosie Jiménez dies in Texas from an illegal abortion. She didn\'t have the financial means to obtain undergo a safe procedure.',
+    factCite: 3
+  },{
+    timelinePhoto: 'img/lets-make-america-great-again-reagan-button-1980.jpg',
+    year: 1980,
+    text: 'Identified as a powerful tactic by Republican strategists, the "rights of the unborn" are used with great effect to rally evangelicals and upset Democrats. "With regard to the freedom of the individual for choice with regard to abortion, there\'s one individual who\'s not being considered at all. That\'s the one who is being aborted," says Reagan. He wins by a landslide. ',
+    factCite: 3
   }
 ];
 
@@ -89,24 +74,35 @@ CARD ARRAY
 - these changes inform other functions and classes in the app
 */
 
-const cardArray = [
-   {'index': 1 , 'color': 'red', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 2 , 'color': 'orange', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 3 , 'color': 'yellow', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 4 , 'color': 'green', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 5 , 'color': 'blue', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 6 , 'color': 'purple', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 7 , 'color': 'black', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 8 , 'color': 'brown', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 9 , 'color': 'red', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 10 , 'color': 'orange', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 11 , 'color': 'yellow', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 12 , 'color': 'green', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 13 , 'color': 'blue', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 14 , 'color': 'purple', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 15 , 'color': 'black', 'text': '?', 'selected': 'unselected', 'winning': false},
-   {'index': 16 , 'color': 'brown', 'text': '?', 'selected': 'unselected', 'winning': false}
-];
+const cardArray = [{
+   'index': 1 ,
+   'issue': 'breast-cancer',
+   'text': '?',
+   'cardFace': 'img/matching-breast-cancer-myth.png',
+   'selected': 'unselected',
+   'winning': false
+  },{
+    'index': 2 ,
+    'issue': 'breast-cancer',
+    'text': '?',
+    'cardFace': 'img/matching-breast-cancer-false.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+   'index': 3 ,
+   'issue': 'federal-funding',
+   'text': '?',
+   'cardFace': 'img/matching-federal-funding-myth.png',
+   'selected': 'unselected',
+   'winning': false
+  },{
+   'index': 4 ,
+   'issue': 'federal-funding',
+   'text': '?',
+   'cardFace': 'img/matching-federal-funding-false.png',
+   'selected': 'unselected',
+   'winning': false
+  }];
 
 /*
 TIMELINE ENTRY COMPONENT
@@ -115,7 +111,7 @@ TIMELINE ENTRY COMPONENT
 
 Vue.component ( 'timeline-entry', {
 	props: [
-		'events', 'timelinePhoto', 'text', 'year'
+		'events', 'timelinePhoto', 'text', 'year', 'factCite'
 	],
 	template: `
 			<div class='container column horizontal-scroll'>
@@ -123,7 +119,10 @@ Vue.component ( 'timeline-entry', {
           <img v-bind:src='timelinePhoto' class='photo'/>
         </div>
         <h4 class='timeline-year'>{{ year }}</h4>
-				<p class='timeline-descriptors'>{{ text }}</p>
+  				<p class='timeline-descriptors'>
+            {{ text }}
+            <sup>{{ factCite }}</sup>
+          </p>
 			</div>
 	`
 });
@@ -136,18 +135,20 @@ CARD COMPONENT
 
 Vue.component ( 'single-card', {
 	props: [
-		'cards', 'text'
+		'cards', 'cardFace', 'text'
 	],
 	template: `
-		<div class='card'>
-			<h3>{{ text }}</h3>
-		</div>
+  <div class='card'>
+    <img v-bind:src='cardFace' class='photo'/>
+    <h2>{{ text }}</h2>
+  </div>
 	`
 });
 
 var vm = new Vue ({
   el: '#widgetApp',
   data: {
+    matchingMessage: 'Click the cards to make a match.',
     widgets: widgetArray,
     events: timelineArray,
     cards: cardArray,
@@ -176,17 +177,19 @@ var vm = new Vue ({
       },
       compareCards: function(){
         // compares colors of selectedCards and adds to matchedCards if a match
-          if (this.selectedCards[0].color === this.selectedCards[1].color) {
+          if (this.selectedCards[0].issue === this.selectedCards[1].issue) {
               this.selectedCards[0].text = this.selectedCards[1].text =
                 '';
               this.selectedCards[0].selected = this.selectedCards[1].selected= 'matched';
+              this.matchingMessage = 'Great! Keep going.';
               this.matchedCards.push(this.selectedCards[0], this.selectedCards[1]);
               this.selectedCards.pop();
               this.selectedCards.pop();
-          } else if (this.selectedCards[0].color !== this.selectedCards[1].color) {
+          } else if (this.selectedCards[0].issue !== this.selectedCards[1].issue) {
             // if not a match, pops both from selectedCards and returns to base values
               this.selectedCards[0].text = this.selectedCards[1].text = 'X';
               setTimeout(function(){
+                    this.matchingMessage = 'Click the cards to make a match.';
                     this.selectedCards[0].selected = this.selectedCards[1].selected = 'unselected';
                     this.selectedCards[0].text = this.selectedCards[1].text = '?';
                     this.selectedCards.pop();
@@ -206,7 +209,7 @@ var vm = new Vue ({
         }
       },
       winner: function(){
-            alert('Bravo!');
+            this.matchingMessage = 'Congratulations! You found all the matches. Thanks so much for playing.';
       }
   },
   created: function(){
@@ -256,14 +259,14 @@ APP FUNCTIONS
 //       },
 //       compareCards: function(){
 //         // compares colors of selectedCards and adds to matchedCards if a match
-//           if (this.selectedCards[0].color === this.selectedCards[1].color) {
+//           if (this.selectedCards[0].issue === this.selectedCards[1].issue) {
 //               this.selectedCards[0].text = this.selectedCards[1].text =
 //                 'yay';
 //               this.selectedCards[0].selected = this.selectedCards[1].selected= 'matched';
 //               this.matchedCards.push(this.selectedCards[0], this.selectedCards[1]);
 //               this.selectedCards.pop();
 //               this.selectedCards.pop();
-//           } else if (this.selectedCards[0].color !== this.selectedCards[1].color) {
+//           } else if (this.selectedCards[0].issue !== this.selectedCards[1].issue) {
 //             // if not a match, pops both from selectedCards and returns to base values
 //               this.selectedCards[0].text = this.selectedCards[1].text = 'X';
 //               setTimeout(function(){

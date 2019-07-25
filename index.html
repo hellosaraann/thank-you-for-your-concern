@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
   <title>Thank You For Your Concern — digital wireframe</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,6 +47,10 @@
     </div>
 
     <div>
+      <div class='fixed-widget'>
+        <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
+      </div>
+
       <div class='center-wrap'>
         <h2>You care about us</h2>
         <blockquote>
@@ -55,11 +60,9 @@
           <footer>
               Barbara Levy, VP of Health Policy and Advocacy at the American College of Obstetricians and Gynecologists.<sup>10</sup>
           </footer>
+        </blockquote>
       </div>
-      </blockquote>
-      <div class='fixed-widget'>
-        <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
-      </div>
+
       <div class='center-wrap'>
         <p>
           The United States has the highest rising maternal mortality rate of any of the developed nations by far, with American mothers nearly three to seven times more likely to die from causes related to childbirth than other developed nations.<sup>10</sup> Of the Title V program supporting maternal & child health, 78% goes to infants and special needs children, and 6% goes to mothers. Medicaid, while the ACA still stands, covers mothers for 60 days postpartum, and infants one year. In some cases students are allowed to complete their training as maternal-fetal specialists without having even been to the delivery room, such is the focus placed on the child.<sup>9</sup>
@@ -74,48 +77,49 @@
     </div>
 
     <div id='infographicApp'>
-      <a class='center-wrap' id='infographic-trigger'>
-        <h2>You care about our children</h2>
-      </a>
       <div class='fixed-widget'>
         <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
       </div>
+      <a class='center-wrap' id='infographic-trigger'>
+        <h2>You care about our children</h2>
+      </a>
       <p class='center-wrap highlight'>
         75% of us are at or below the poverty line. A majority of us make this hard choice because we cannot afford financially to have another child or children. 60% of us already have another child. (Percentage of babies given up for adoption that stay in orphanages?)
       </p>
     </div>
 
     <div id='gameApp'>
-      <h3 class='center-wrap'>Match the facts.</h3>
+      <h2 class='center-wrap'>Fact or Fiction?</h2>
+      <p class='center-wrap'>
+        A brief look at some troublesome tall-tales widely in circulation.
+      </p>
+      <h3 v-bind:matching-message='matchingMessage'
+          class='center-wrap'>
+          {{ matchingMessage }}
+        </h3>
 
-      <div class='fixed-widget container column'>
+      <div class='fixed-widget'>
         <div class='container card-game center-wrap'>
           <single-card
-            v-for='(card, index, selected) in cards'
-            v-bind:text='card.text'
+            v-for='(card, index, text, selected) in cards'
+            v-bind:card-face='card.cardFace'
             v-bind:index='card.index'
+            v-beind:text='card.text'
             v-bind:class='{
               unselected: card.selected === "unselected",
               matched: card.selected === "matched",
-              winning: card.winning === true,
-              mismatch: card.text ==="X",
-              red: card.color === "red",
-              orange: card.color === "orange",
-              yellow: card.color === "yellow",
-              green: card.color === "green",
-              blue: card.color === "blue",
-              purple: card.color === "purple",
-              black: card.color === "black",
-              brown: card.color === "brown"
+              winning: card.winning === true
             }'
             v-on:click.native='displayCard(card)'
           ></single-card>
         </div>
-        <button type="button"
-                id='shuffleButton'
-                v-on:click='window.location.reload(true)'>
-                Refresh
-        </button>
+        <div class='center-wrap'>
+          <button type="button"
+                  id='shuffleButton'
+                  v-on:click='window.location.reload(true)'>
+                  Refresh
+          </button>
+        </div>
       </div>
     </div>
 
@@ -123,28 +127,32 @@
       <a class='widget-trigger center-wrap' id='timeline-trigger'>
         <h2>A symptom of our times?</h2>
       </a>
+      <p class='center-wrap highlight'>
+        Abortion has been well documented for over 4,000 years. It was commonly legal until the ‘quickening’, when a woman could feel the child moving in the womb, and was commonly  practiced by midwives. Legality was challenged for political reasons, for the business of pharmacology, and for control over women.
+      </p>
       <div class='widget container horizontal-scrolling-section' id='timeline-widget'>
         <timeline-entry
           v-for='event in events'
           v-bind:timeline-photo='event.timelinePhoto'
           v-bind:year='event.year'
           v-bind:text='event.text'
+          v-bind:fact-cite='event.factCite'
         ></timeline-entry>
       </div>
-      <p class='center-wrap highlight'>
-        Abortion has been well documented for over 4,000 years. It was commonly legal until the ‘quickening’, when a woman could feel the child moving in the womb, and was commonly  practiced by midwives. Legality was challenged for political reasons, for the business of pharmacology, and for control over women.
-      </p>
     </div>
 
     <div>
       <a class='center-wrap' id='story-trigger'>
-        <h2>A personal plea</h2>
+        <h2>In conclusion</h2>
       </a>
       <p class='center-wrap highlight'>
-        Lastly we have a few remaining things we'd like to say, in our own voices. We hope that you will take the time to try to really listen.
+        A few remaining things to say, using voices and words of people affected by this debate.
       </p>
-      <div class='expanding-widget container' id='storyWidget'>
-        <h2><a href='#' class='link-dk-bg'><i class="fas fa-play icon-large"></i></a></h2>
+      <div class='fixed-widget container' id='storyWidget'>
+        <picture class='center-wrap'>
+          <img src="img/plea-to-critics-thumbnail.jpg" alt="Video plea to critics — Dear stranger" />
+        </picture>
+        <!-- <iframe src="https://player.vimeo.com/video/349783181" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
       </div>
     </div>
 
