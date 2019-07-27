@@ -122,6 +122,18 @@ body {
   color: #151E3D;
 }
 
+main {
+  padding: 0 inherit;
+  scroll-snap-type: y mandatory;
+}
+
+.content-section {
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -132,8 +144,8 @@ body {
   flex-direction: column;
 }
 
-.space-evenly {
-  justify-content: space-evenly;
+.wideset {
+  justify-content: space-between;
 }
 
 .full-width {
@@ -143,29 +155,28 @@ body {
   margin: 0;
 }
 
-.center-wrap {
-  margin: 0 auto;
-  width: 60vw;
+.item {
+  box-sizing: border-box;
+  padding: 2.5rem;
+  margin: auto;
 }
 
-.text-item {
-  box-sizing: border-box;
-  padding: 5rem 2.5rem;
-  margin: 0;
+.text {
+  max-width: 60rem;
 }
 
 .img-item {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
-}
-
-.item-1-1 {
-  width: 100%;
+  margin: auto;
 }
 
 .item-1-3 {
   width: 30%;
+}
+
+.item-1-4 {
+  width: 25%
 }
 
 .item-2-3 {
@@ -176,50 +187,41 @@ body {
   width: 50%;
 }
 
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: block;
-  scroll-snap-stop: always;
-}
-
-.content-section {
-  scroll-margin-top: 0;
-  scroll-snap-align: start;
-}
-
 .widget {
   box-sizing: border-box;
   height: auto;
+  margin: 0;
   padding: 0;
   width: 100%;
   opacity: 1;
   /* transition: height 2s ease-out 1s, opacity 3s ease-out .5s, padding 2s ease-out .5s; */
 }
 
-.fixed-widget {
-  width: 100vw;
-  height: auto;
-  margin: 0;
-  background-color: #EFEEE3;
-  box-sizing: border-box;
-}
-
-.side-by-side.container {
+.widget.horizontal-scrolling {
+  justify-content: flex-start;
   align-items: flex-start;
-  justify-content: space-between;
-  margin: 0;
-  height: auto;
+  margin: 0 5rem 0 0;
+  padding: .5em 5rem .5rem 0;
+  overflow-x: auto;
+  background-color: #EF7240;
+  scroll-snap-type: x proximity;
 }
 
-.side-by-side {
-  padding: 5rem;
+.left-align.text-item {
+  margin-left: 2.5rem;
 }
 
-.text {
-  padding: 5rem 2rem;
+.expanding.widget {
+  padding: 4em;
+  height: 40vh;
 }
 
-.side-info {
-  max-width: 350px;
+.padding-bottom {
+  padding-bottom: 5rem;
+}
+
+.full-height {
+  min-height: 100vh;
 }
 
 /* WIDGETS SPECIFICS — widget trigger (? to be deleted ?) */
@@ -249,17 +251,6 @@ body {
 
 /* WIDGET SPECIFICS — timeline widget */
 
-.widget.horizontal-scrolling-section {
-  box-sizing: border-box;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-right: 5rem;
-  padding: .5em 5rem;
-  overflow-x: auto;
-  background-color: #EF7240;
-  scroll-snap-type: x proximity;
-}
-
 .horizontal-scrolling-section::-webkit-scrollbar {
   display: none;
 }
@@ -277,9 +268,8 @@ body {
 /* WIDGET SPECIFICS — matching tool */
 
 .card-matching {
+  padding: 2.5rem;
   display: flex;
-  width: 80vw;
-  max-width: 800px;
   height: auto;
   flex-wrap: wrap;
 }
@@ -311,35 +301,23 @@ body {
 }
 
 
-/* WIDGET SPECIFICS — final plea */
-
-.expanding-widget {
-  background-color: #603B5D;
-  color: #EFEEE2;
-  padding: 4em;
-  height: 40vh;;
-}
-
-
-
 /* GENERAL — images */
 
 .hero {
-  width: 100vw;
+  width: 100%;
   max-width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-color: #293a80;
+  background-color: #161E39;
   color: #C8C9C1;
-  margin-bottom: 5rem;
-  background-image: url('../img/hero-flowers.jpg');
-  background-position: center;
+  background-image: url('../img/thank-you-for-your-concern-floral-header.svg');
+  background-position: center center;
   background-attachment: fixed;
 }
 
 .timeline-photo {
   max-width: 350px;
-  max-height: 300px;
+  max-height: 250px;
   margin: 1rem;
 }
 
@@ -377,19 +355,26 @@ h1, h2, h4 {
 
 h1 {
   font-size: 8rem;
-  margin: auto;
-  text-shadow: 0 0 15px #39161E;
+  text-shadow: 0 0 20px #161E39;
 }
 
 h2 {
   font-size: 4rem;
+  margin-bottom: 1.25rem;
 }
 
-.side-by-side h2 {
+h2.section-start {
+  margin-top: 5em;
+}
+
+h2.left-align {
   text-align: left;
+  margin-top: 2.5rem;
 }
 
-h3, h5, button {
+h3,
+h5,
+button {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
   text-transform: uppercase;
@@ -406,22 +391,35 @@ h4 {
   line-height: 1em;
   padding: .5rem 0;
   margin: .5rem 0;
+  color: #EFEEE3;
 }
 
 h5, button {
   font-size: 1.1rem;
   font-weight: 900;
+  margin-top: 0;
 }
 
 a.link-dk-bg {
   color: #E9FEE8;
 }
 
+p {
+  padding-bottom: 2rem;
+}
+
+p.image-description {
+  font-size: .9rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #2E5490;
+  align-self: flex-end;
+}
+
 blockquote p,
 .highlight p {
   font-size: 1.5rem;
   line-height: 1.75em;
-  padding: 1rem 0;
 }
 
 blockquote p {
@@ -457,6 +455,7 @@ blockquote {
 p.timeline-descriptors {
   /* line-height: 1.25em; */
   font-size: 1rem;
+  line-height: 1.5em;
   color: #161E39;
   padding: 1em 0;
   margin: .5em 0;
@@ -477,25 +476,37 @@ button {
   cursor: pointer;
 }
 
-
 /* GENERAL — css animations */
 
 .moving-arrow {
   content: "";
-  border-left: 20px solid #C8C9C2;
-  border-bottom: 20px solid #C8C9C2;
+  position: absolute;
+  bottom: 10rem;
+  border-left: 15px solid #C8C8C5;
+  border-bottom: 15px solid #C8C8C5;
+  box-shadow: -5px 5px 5px #161E39;
   display: block;
   height: 2.5rem;
   width: 2.5rem;
-  margin: 0;
+  margin: 0 0 2.5rem 0;
   animation-name: arrows;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-timing-function: initial;
   animation-iteration-count: infinite;
   animation-delay: initial;
   animation-direction: initial;
   animation-fill-mode: initial;
   animation-play-state: initial;
+}
+
+.right.moving-arrow {
+  border-left: 15px solid #161E39;
+  border-bottom: 15px solid #161E39;
+  box-shadow: -5px 5px 5px #8C3560;
+  animation-name: arrows-right;
+  position: absolute;
+  left: 2.5rem;
+  bottom: 2.5rem;
 }
 
 @keyframes arrows {
@@ -509,6 +520,21 @@ button {
   }
   100% {
     transform: rotate(-45deg) translateY(2rem) translateX(-2rem);
+    opacity: 0;
+  }
+}
+
+@keyframes arrows-right {
+  0% {
+    transform: rotate(225deg) translateY(0)
+    translateX(0);
+  }
+  90% {
+    transform: rotate(225deg) translateY(1rem) translateX(-1rem);
+    opacity: 90%;
+  }
+  100% {
+    transform: rotate(225deg) translateY(2rem) translateX(-2rem);
     opacity: 0;
   }
 }
@@ -637,10 +663,6 @@ button {
   margin: 0 auto;
 }
 
-.side-info h2 {
-  text-align: center;
-}
-
 button {
   float: right;
   margin: 0;
@@ -665,6 +687,13 @@ button {
     width: 100vw;
     max-width: 100vw;
     min-width: 100vw;
+    position: relative;
+  }
+
+
+
+  .item-1-3, .item-2-3 {
+    width: 100%;
   }
 
     /* TYPOGRAPHY */
@@ -684,15 +713,11 @@ button {
     padding-bottom: 2rem;
   }
 
-  .center-wrap,
-  .side-info {
-    margin: auto;
-    width: 80vw;
-    max-width: 80vw;
-    padding: 1rem auto;
+  .left-align {
+    text-align: center;
   }
 
-  .text {
+  .item {
     padding: 1rem 0;
     margin: 0 auto;
   }
@@ -706,16 +731,6 @@ button {
   .card {
     width: 125px;
     height: 125px;
-  }
-
-  .card-matching {
-    max-width: 575px;
-    margin: 2rem auto;
-    padding: 0;
-  }
-
-  .side-by-side {
-    padding: 1rem;
   }
 
 }
@@ -755,7 +770,7 @@ button {
 @media all and (max-width: 630px) {
 
 
-  .down-arrow {
+  .moving-arrow {
     border: 0;
     border-width: 0;
     display: none;

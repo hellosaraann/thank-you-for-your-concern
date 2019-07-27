@@ -29,34 +29,35 @@
   </header>
 
 
-  <div class='hero container column full-width space-evenly'>
-    <h1 class='center-wrap'>Thank you for your concern.</h1>
-    <div class='moving-arrow'></div>
+  <div class='hero container column'>
+    <h1 class='item item-2-3'>Thank you for your concern.</h1>
+    <div>
+      <div class='moving-arrow'></div>
+    </div>
   </div>
 
 
-  <main id='widgetApp' class='y mandatory-scroll-snapping'>
+  <main id='widgetApp'>
 
-    <div class='center-wrap highlight content-section'>
-      <p>
-        Thank you for coming here. It means a lot that you came. We know that you have truly serious and deep feelings about this and that you are coming from a place of care for women and children. We know that for you this is a calling from God.
-      </p>
-      <p>
-        We’ve listened and read a lot, and we hear what you have to say. We have some responses. We don’t want to yell or argue. Instead we wanted to share this way, calmly, and ask you to please try to hear us out until the end. We don’t claim to speak for all of us in our situation, but we do speak for many, and we seek compassion and empathy for all.
-      </p>
+    <div class='content-section dark-bg container column'>
+      <div class='text item highlight'>
+        <p>
+          Thank you for coming here. It means a lot that you came. We know that you have truly serious and deep feelings about this and that you are coming from a place of care for women and children. We know that for you this is a calling from God.
+        </p>
+        <p>
+          We’ve listened and read a lot, and we hear what you have to say. We don’t want to yell or argue. Instead we wanted to share this way, calmly, and ask you to please try to hear us out until the end. We don’t claim to speak for all of us in our situation, but we do speak for many, and we seek compassion and empathy for all.
+        </p>
+      </div>
+      <div>
+        <div class='moving-arrow'></div>
+      </div>
     </div>
 
 
-    <div id='care-for-women' class='content-section full-width'>
-      <div class='fixed-widget container white-bg'>
-        <picture class='center-wrap'>
-          <img src="img/intended-pregnancies-us-infographic.jpg"
-          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." />
-        </picture>
-      </div>
+    <div id='care-for-women' class='white-bg widget content-section'>
 
-      <div class='center-wrap text'>
-        <h2>You care about us</h2>
+      <div class='text item'>
+        <h2 class='section-start'>You care about us</h2>
 
         <blockquote>
           <p>
@@ -70,36 +71,59 @@
         <p>
           The United States has the highest rising maternal mortality rate of any of the developed nations by far, with American mothers nearly three to seven times more likely to die from causes related to childbirth than other developed nations.<sup>10</sup> Of the Title V program supporting maternal & child health, 78% goes to infants and special needs children, and 6% goes to mothers. Medicaid, while the ACA still stands, covers mothers for 60 days postpartum, and infants one year. In some cases students are allowed to complete their training as maternal-fetal specialists without having even been to the delivery room, such is the focus placed on the child.<sup>9</sup>
         </p>
-        <p>
-          In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
-        </p>
+      </div>
+
+      <div class='container'>
+        <div class='item item-1-4'>
+          <h5>Data in images</h5>
+          <button
+            type='button'
+            id='infoScrollButton1'
+            v-on:click=''>
+            Scroll
+          </button>
+        </div>
+        <img
+          src="img/intended-pregnancies-us-infographic.jpg"
+          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended."
+          class='img-item item-1-2'/>
+        <div class='text item item-1-4'>
+          <p class='image-description'>
+            In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
+          </p>
+        </div>
+      </div>
+      <div class='text item'>
         <p>
           Rates of abortion are nearly equal in countries where the practice is outlawed and in countries where it is allowed (29% vs. 27%, respectively).<sup>7</sup> Legal abortion has exponentially increased the safety of the practice through quality control and because people have them earlier (25% were 13 weeks or later in 1970, compared with 12% today). When abortion is outlawed, mothers are increasingly jailed and investigated for natural miscarriages, and maternal mortality rate rises as much as 8-11% due to things like refusal of life-saving medication in case it harms the fetus, not stopping ectopic pregnancies, and increased suicide rates especially in the young.<sup>6</sup>
         </p>
       </div>
+
     </div>
 
 
-    <div id='care-for-children' class='content-section full-width'>
-      <div class='fixed-widget container white-bg'>
-        <picture class='center-wrap'>
-          <img src="img/intended-pregnancies-us-infographic.jpg"
-          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." />
-        </picture>
-      </div>
+    <div id='care-for-children' class='content-section'>
 
-      <div class='center-wrap text'>
+      <div class='text item'>
         <h2>You care about our children</h2>
         <p class='highlight'>
           75% of us are at or below the poverty line. A majority of us make this hard choice because we cannot afford financially to have another child or children. 60% of us already have another child. (Percentage of babies given up for adoption that stay in orphanages?)
         </p>
       </div>
+
+      <div class='container white-bg'>
+        <img
+          src="img/intended-pregnancies-us-infographic.jpg"
+          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended."
+          class='img-item item-1-2'/>
+      </div>
+
     </div>
 
 
-    <div id='matching-tool' class='content-section fixed-widget container side-by-side dark-bg'>
-      <div class='text side-info'>
-        <h2>Two Sides</h2>
+    <div id='matching-tool' class='content-section container dark-bg full-height wideset'>
+      <div class='text item item-1-2'>
+        <h2 class='left-align'>Two Sides</h2>
         <p>
           Many hard rumors and prejudices cloud this debate. Match each heartfelt concern with its corresponding response.
         </p>
@@ -115,30 +139,36 @@
         </button>
       </div>
 
-        <div class='card-matching'>
-          <single-card
-            v-for='(card, index, text, selected) in cards'
-            v-bind:card-face='card.cardFace'
-            v-bind:index='card.index'
-            v-beind:text='card.text'
-            v-bind:class='{
-              unselected: card.selected === "unselected",
-              matched: card.selected === "matched",
-              winning: card.winning === true
-            }'
-            v-on:click.native='displayCard(card)'
-          ></single-card>
-        </div>
+      <div class='card-matching item item-1-2'>
+        <single-card
+          v-for='(card, index, text, selected) in cards'
+          v-bind:card-face='card.cardFace'
+          v-bind:index='card.index'
+          v-beind:text='card.text'
+          v-bind:class='{
+            unselected: card.selected === "unselected",
+            matched: card.selected === "matched",
+            winning: card.winning === true
+          }'
+          v-on:click.native='displayCard(card)'
+        ></single-card>
+      </div>
     </div>
 
 
-    <div id='timelineApp' class='orange-bg column content-section'>
-      <div class='side-by-side text'>
-        <h2>A symptom of today?</h2>
-        <h5>The practice of abortion has been documented for over 4,000 years.</h5>
+    <div id='timelineApp' class='orange-bg content-section'>
+      <div >
+        <div class='item left-align'>
+          <h2 class='left-align'>A symptom of today?</h2>
+          <h5>The practice of abortion has been documented for over 4,000 years.</h5>
+        </div>
+
       </div>
 
-      <div class='widget container horizontal-scrolling-section' id='timeline-widget'>
+      <div class='container widget horizontal-scrolling' id='timeline-widget'>
+        <div class='img-item item-1-2'>
+          <div class='right moving-arrow'></div>
+        </div>
         <timeline-entry
           v-for='event in events'
           v-bind:timeline-photo='event.timelinePhoto'
@@ -151,16 +181,17 @@
 
 
     <div id='final-plea' class='content-section'>
-      <div class='text'>
+      <div class='text item'>
         <h2>In conclusion</h2>
-        <h5 class='center-wrap highlight'>
+        <h5 class='highlight'>
           A final ask, featuring voices and words of people affected by this debate.
         </h5>
       </div>
-      <div class='fixed-widget container'>
-        <picture class='center-wrap'>
-          <img src="img/plea-to-critics-thumbnail.jpg" alt="Video plea to critics — Dear stranger" />
-        </picture>
+      <div class='container padding-bottom'>
+        <img
+          src="img/plea-to-critics-thumbnail.jpg"
+          alt="Video plea to critics — Dear stranger"
+          class='img-item item-2-3'/>
         <!-- <iframe src="https://player.vimeo.com/video/349783181" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
       </div>
     </div>

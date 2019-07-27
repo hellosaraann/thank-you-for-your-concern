@@ -7,8 +7,8 @@ const widgetArray = [
 
 const timelineArray = [{
     timelinePhoto: 'img/13c-pennyroyal-herbal-abortive.jpg',
-    year: '3000s–1500s BCE',
-    text: 'The earliest record of abortion appears in the Royal Archives of China. Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides.',
+    year: '3000–1500s BCE',
+    text: 'The earliest record of abortion appears in 3000 BCE, in the Royal Archives of China. In the 1500s BCE, Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides.',
     factCite: 1
   },{
     timelinePhoto: 'img/fragment_of_Hippocratic_oath.png',
@@ -38,7 +38,7 @@ const timelineArray = [{
   },{
     timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
     year: '1930s',
-    text: 'The American Birth Control League was started by Margaret Sanger and quickly grew to over 500 birth control clinics throughout the United States. Abortions in the United States increased with economic pressures to over 681,000 each year inciting many physicians to become abortion specialists. In addition to numerous physicians in New York City, and underground clinics were established on the West Coast. During the Depression era, contraceptive devices and condoms became ever more socially acceptable and were commonly available at pharmacies and gas stations. The United States had one of the highest maternal mortality rates in the world with induced abortions responsible for at least 14% of deaths.',
+    text: 'The American Birth Control League was started by Margaret Sanger and quickly grew to over 500 birth control clinics throughout the United States. Abortions in the United States increased with economic pressures to over 681,000 each year inciting many physicians to become abortion specialists. In addition to numerous physicians in New York City, underground clinics were established on the West Coast. Contraceptive devices and condoms were available at pharmacies and gas stations.',
     factCite: 1
   },{
     timelinePhoto: 'img/ca-governor-ronald-reagan-and-family.jpg',
@@ -197,7 +197,7 @@ Vue.component ( 'timeline-entry', {
 				<div class='timeline-image-placeholder'>
           <img v-bind:src='timelinePhoto' class='timeline-photo'/>
         </div>
-        <h4 class='timeline-year'>{{ year }}</h4>
+        <h4>{{ year }}</h4>
   				<p class='timeline-descriptors'>
             {{ text }}
             <sup>{{ factCite }}</sup>
