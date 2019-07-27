@@ -6,14 +6,9 @@ const widgetArray = [
 ];
 
 const timelineArray = [{
-    timelinePhoto: '',
-    year: '3000s BCE',
-    text: 'The earliest record of abortion appears in the Royal Archives of China.',
-    factCite: 1
-  },{
-    timelinePhoto: '',
-    year: '1850s–1500s BCE',
-    text: 'Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides.',
+    timelinePhoto: 'img/13c-pennyroyal-herbal-abortive.jpg',
+    year: '3000s–1500s BCE',
+    text: 'The earliest record of abortion appears in the Royal Archives of China. Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides.',
     factCite: 1
   },{
     timelinePhoto: 'img/fragment_of_Hippocratic_oath.png',
@@ -200,7 +195,7 @@ Vue.component ( 'timeline-entry', {
 	template: `
 			<div class='container column horizontal-scroll'>
 				<div class='timeline-image-placeholder'>
-          <img v-bind:src='timelinePhoto' class='photo'/>
+          <img v-bind:src='timelinePhoto' class='timeline-photo'/>
         </div>
         <h4 class='timeline-year'>{{ year }}</h4>
   				<p class='timeline-descriptors'>

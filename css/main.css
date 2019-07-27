@@ -94,11 +94,24 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* ==========================================================================
+/* =======================================================================
    Author's custom styles
-   ========================================================================== */
+=================================================================== */
 
-/* GENERAL STRUCTURE + TYPOGRAPHY */
+/*** GUIDE TO STYLES, in order listed below ***
+ - structure (flex + wraps)
+ - widget specifics
+    - infographics
+    - horizontal-scrolling timeline
+    - matching tool
+    - final plea
+ - images
+ - typography
+ - css animations
+ - color
+
+
+/* GENERAL — structure */
 
 body {
   scroll-behavior: smooth;
@@ -109,11 +122,207 @@ body {
   color: #151E3D;
 }
 
-.center-wrap {
-  margin: auto;
-  width: 60%;
-  max-width: 55rem;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.column.container {
+  flex-direction: column;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.full-width {
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
+  margin: 0;
+}
+
+.center-wrap {
+  margin: 0 auto;
+  width: 60vw;
+}
+
+.text-item {
+  box-sizing: border-box;
+  padding: 5rem 2.5rem;
+  margin: 0;
+}
+
+.img-item {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.item-1-1 {
+  width: 100%;
+}
+
+.item-1-3 {
+  width: 30%;
+}
+
+.item-2-3 {
+  width: 70%;
+}
+
+.item-1-2 {
+  width: 50%;
+}
+
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: block;
+  scroll-snap-stop: always;
+}
+
+.content-section {
+  scroll-margin-top: 0;
+  scroll-snap-align: start;
+}
+
+.widget {
+  box-sizing: border-box;
+  height: auto;
+  padding: 0;
+  width: 100%;
+  opacity: 1;
+  /* transition: height 2s ease-out 1s, opacity 3s ease-out .5s, padding 2s ease-out .5s; */
+}
+
+.fixed-widget {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  background-color: #EFEEE3;
+  box-sizing: border-box;
+}
+
+.side-by-side.container {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  height: auto;
+}
+
+.side-by-side {
+  padding: 5rem;
+}
+
+.text {
+  padding: 5rem 2rem;
+}
+
+.side-info {
+  max-width: 350px;
+}
+
+/* WIDGETS SPECIFICS — widget trigger (? to be deleted ?) */
+
+.widget-trigger {
+  font-weight: bolder;
+  display: block;
+  width: 100%;
+  position: sticky;
+}
+
+.widget-trigger:focus,
+.widget-trigger:hover {
+  font-weight: 900;
+}
+
+/* .widget-trigger:hover + .widget,
+.widget-trigger:focus + .widget,
+.widget:hover,
+.widget:focus {
+    height: auto;
+    padding: 4em;
+    opacity: 1;
+    transition: opacity 2s ease-in-out .25s;
+} */
+
+
+/* WIDGET SPECIFICS — timeline widget */
+
+.widget.horizontal-scrolling-section {
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 5rem;
+  padding: .5em 5rem;
+  overflow-x: auto;
+  background-color: #EF7240;
+  scroll-snap-type: x proximity;
+}
+
+.horizontal-scrolling-section::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll {
+  box-sizing: border-box;
+  max-width: 400px;
+  min-width: 25em;
+  margin: .5rem 2rem;
+  padding: 2rem;
+  scroll-snap-align: center;
+}
+
+
+/* WIDGET SPECIFICS — matching tool */
+
+.card-matching {
+  display: flex;
+  width: 80vw;
+  max-width: 800px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 180px;
+  height: 180px;
+  margin: .5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.unselected img {
+  opacity: 0;
+}
+
+.card img {
+  opacity: 1;
+  width: 100%;
+}
+
+.card.unselected {
+  background-color: #F4E5B4;
+  color: #151E3D;
+  border-radius: 30px;
+  background-image: url('../img/matching-heart-bg.png');
+}
+
+
+/* WIDGET SPECIFICS — final plea */
+
+.expanding-widget {
+  background-color: #603B5D;
+  color: #EFEEE2;
+  padding: 4em;
+  height: 40vh;;
+}
+
+
+
+/* GENERAL — images */
 
 .hero {
   width: 100vw;
@@ -128,17 +337,37 @@ body {
   background-attachment: fixed;
 }
 
-.down-arrow {
-  border: solid #EFEEE1;
-  border-width: 0 10px 10px 0;
-  display: block;
-  padding: 1rem;
-  margin: 1rem auto 3rem auto;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.timeline-photo {
+  max-width: 350px;
+  max-height: 300px;
+  margin: 1rem;
 }
 
-/* TYPOGRAPHY */
+.fixed-widget img {
+  width: 100%;
+}
+
+
+/* GENERAL — color */
+
+div.dark-bg {
+  background-color: #161E39;
+  color: #EFEEE3;
+}
+
+div.white-bg {
+  background-color: white;
+}
+
+div.orange-bg {
+  background-color: #EF723F;
+}
+
+.orange-bg p {
+  color: #020306;
+}
+
+/* GENERAL — typography */
 
 h1, h2, h4 {
   font-family: 'Coustard', serif;
@@ -147,15 +376,13 @@ h1, h2, h4 {
 }
 
 h1 {
-  font-size: 8em;
+  font-size: 8rem;
   margin: auto;
   text-shadow: 0 0 15px #39161E;
 }
 
 h2 {
   font-size: 4rem;
-  padding-top: .25em;
-  margin-bottom: 0;
 }
 
 .side-by-side h2 {
@@ -170,13 +397,12 @@ h3, h5, button {
   line-height: 1.25em;
 }
 
-h3 {
-  font-size: 1.5rem;
+h3, h4 {
+  font-size: 2rem;
 }
 
 h4 {
   letter-spacing: .1em;
-  font-size: 2rem;
   line-height: 1em;
   padding: .5rem 0;
   margin: .5rem 0;
@@ -193,9 +419,9 @@ a.link-dk-bg {
 
 blockquote p,
 .highlight p {
-  font-size: 2em;
+  font-size: 1.5rem;
   line-height: 1.75em;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 blockquote p {
@@ -229,129 +455,17 @@ blockquote {
 }
 
 p.timeline-descriptors {
-  font-size: 1.2em;
-  line-height: 1.25em;
+  /* line-height: 1.25em; */
+  font-size: 1rem;
+  color: #161E39;
   padding: 1em 0;
   margin: .5em 0;
 }
 
-#gameApp h3 {
+#matching-tool h3 {
   margin-top: 1em;
   color: #151E3D;
 }
-
-/* WIDGETS + FLEX CONTAINERS */
-
-.widget-trigger {
-  font-weight: bolder;
-  display: block;
-  width: 100%;
-  position: sticky;
-}
-
-.widget-trigger:focus,
-.widget-trigger:hover {
-  font-weight: 900;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container.column {
-  flex-direction: column;
-}
-
-.full-width {
-  width: 100vw;
-  max-width: 100%;
-  min-width: 100vw;
-  margin: auto;
-}
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
-
-.widget {
-  box-sizing: border-box;
-  background-color: white;
-  color: #EFEEE2;
-  height: auto;
-  padding: 0;
-  width: 100%;
-  opacity: 1;
-  transition: height 2s ease-out 1s, opacity 3s ease-out .5s, padding 2s ease-out .5s;
-}
-
-/* .widget-trigger:hover + .widget,
-.widget-trigger:focus + .widget,
-.widget:hover,
-.widget:focus {
-    height: auto;
-    padding: 4em;
-    opacity: 1;
-    transition: opacity 2s ease-in-out .25s;
-} */
-
-.fixed-widget {
-  width: 100vw;
-  height: auto;
-  margin: 2rem 0;
-  background-color: #EFEEE3;
-  box-sizing: border-box;
-}
-
-.fixed-widget img {
-  width: 100%;
-}
-
-.side-by-side.container {
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.side-by-side {
-  margin: 5rem 0;
-  height: 100vh;
-  padding: 5rem;
-  background-color: #161E39;
-  color: #EFEEE3;
-}
-
-.app-info {
-  max-width: 600px;
-}
-
-/* TIMELINE WIDGET */
-
-.widget.horizontal-scrolling-section {
-  justify-content: flex-start;
-  align-items: baseline;
-  padding: .5em 5em;
-  overflow-x: auto;
-  background-color: #EF7240;
-}
-
-.horizontal-scrolling-section::-webkit-scrollbar {
-  display: none;
-}
-
-.horizontal-scroll {
-  max-width: 400px;
-  min-width: 25em;
-  margin: .5rem 2em;
-}
-
-.photo {
-  max-width: 400px;
-  max-height: 300px;
-  margin: 1rem;
-}
-
-/* MATCHING GAME WIDGET */
 
 button {
   background-color: #EF7240;
@@ -363,46 +477,44 @@ button {
   cursor: pointer;
 }
 
-.card-game {
-  display: flex;
-  width: 80vw;
-  height: auto;
-  flex-wrap: wrap;
+
+/* GENERAL — css animations */
+
+.moving-arrow {
+  content: "";
+  border-left: 20px solid #C8C9C2;
+  border-bottom: 20px solid #C8C9C2;
+  display: block;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0;
+  animation-name: arrows;
+  animation-duration: 3s;
+  animation-timing-function: initial;
+  animation-iteration-count: infinite;
+  animation-delay: initial;
+  animation-direction: initial;
+  animation-fill-mode: initial;
+  animation-play-state: initial;
 }
 
-.card {
-  width: 180px;
-  height: 180px;
-  margin: .5em;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes arrows {
+  0% {
+    transform: rotate(-45deg) translateY(0)
+    translateX(0);
+  }
+  90% {
+    transform: rotate(-45deg) translateY(1rem) translateX(-1rem);
+    opacity: 90%;
+  }
+  100% {
+    transform: rotate(-45deg) translateY(2rem) translateX(-2rem);
+    opacity: 0;
+  }
 }
 
-.card.unselected img {
-  opacity: 0;
-}
 
-.card img {
-  opacity: 1;
-}
 
-.card.unselected {
-  background-color: #F4E5B4;
-  color: #151E3D;
-  border-radius: 30px;
-  background-image: url('../img/matching-heart-bg.png');
-}
-
-/* STORY SECTION */
-
-.expanding-widget {
-  background-color: #603B5D;
-  color: #EFEEE2;
-  padding: 4em;
-  height: 40vh;;
-}
 
 
 /* ==========================================================================
@@ -497,7 +609,42 @@ button {
 /* MEDIA QUERIES */
 
 /* laptops and large tablets */
-@media all and (max-width: 1399px) {
+@media all and (max-width: 1366px) {
+
+.center-wrap,
+.side-info {
+  width: 60vw;
+  max-width: 60vw;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+}
+
+.card-matching {
+  max-width: 700px;
+  margin: 5rem auto;
+  padding: 0 auto;
+}
+
+.text {
+  padding: 0;
+}
+
+.side-by-side {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.side-info h2 {
+  text-align: center;
+}
+
+button {
+  float: right;
+  margin: 0;
+}
 
  .hidden-l {
    visibility: hidden;
@@ -511,117 +658,102 @@ button {
 
 
 /* large tablets */
-@media all and (max-width: 1024px) {
+@media all and (max-width: 900px) {
 
-  /* TYPOGRAPHY */
+  .hero {
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 100vw;
+  }
 
-h1 {
-  font-size: 6.5em;
-}
-
-main p,
-.widget-trigger {
-  font-size: 1.2rem;
-  line-height: 1.75em;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-
-.center-wrap: {
-  margin: auto;
-  width: 75vw;
-}
-
-   /* side nav media size changes to header-nav
-
-   .hamburger,
-   .closebtn {
-     cursor: pointer;
-   }
-
-   .header-nav ul ul:before {
-      border-color: transparent;
-      content: none;
-    }
-
-   .header-nav {
-      height: 100vh;
-      width: 0;
-      position: fixed;
-      z-index: 150;
-      top: 0;
-      right: 0;
-      margin: 0;
-      background-color: white;
-      border-left: 1px solid #FAD642;
-      border-top: 1px solid #FAD642;
-      border-bottom: 1px solid #FAD642;
-      overflow-x: hidden;
-      padding-top: 2em;
-      transition: 0.5s;
-   }
-
-   .header-nav nav {
-     right: 0;
-     position: absolute;
-     top: 20rem;
-   }
-
-   .header-nav ul {
-     list-style: none;
-   }
-
-   .header-nav li {
-     display: block;
-     width: 100%;
-     padding: .75em;
-   }
-
-   li.parent-drop-down ul {
-     visibility: visible;
-     position: static;
-     border: 0;
-   }
-
-   .closebtn {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      font-size: 3rem;
-      z-index: 200;
-   }
-
-   .closebtn a:hover,
-   .closebtn a:focus {
-     color: #431E1D;
-     border: 0;
-   }
-
- */
-}
-
-/* large smartphones & tablets */
-@media all and (max-width: 775px) {
+    /* TYPOGRAPHY */
 
   h1 {
     font-size: 6em;
-    margin-bottom: 0;
   }
 
   h2 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
-  .center-wrap {
-    width: 85vw;
+  body {
+    font-size: 1rem;
+    line-height: 1.75em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .center-wrap,
+  .side-info {
     margin: auto;
+    width: 80vw;
+    max-width: 80vw;
+    padding: 1rem auto;
+  }
+
+  .text {
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+
+  .fixed-widget.container {
+    padding: 1rem auto;
+  }
+
+  /* MATCHING TOOL */
+
+  .card {
+    width: 125px;
+    height: 125px;
+  }
+
+  .card-matching {
+    max-width: 575px;
+    margin: 2rem auto;
+    padding: 0;
+  }
+
+  .side-by-side {
+    padding: 1rem;
+  }
+
+}
+
+/* large smartphones & tablets */
+@media all and (max-width: 710px) {
+
+  .center-wrap,
+  .side-info,
+  .text {
+    margin: 1rem;
+    max-width: 98vw;
+    padding: 1rem;
+  }
+
+  .side-by-side {
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-matching {
+    width: 500px;
+    max-width: 98vw;
+    margin: 0 0 2rem 0;
+    padding: 0;
   }
 
 }
 
 
 /* smartphones */
-@media all and (max-width: 575px) {
+@media all and (max-width: 630px) {
+
 
   .down-arrow {
     border: 0;
@@ -631,37 +763,7 @@ main p,
     margin: 0;
   }
 
-  h1 {
-    font-size: 3em;
-    padding: 1em 0;
-  }
-
   .hero {
-    height: auto;
-
-  }
-
-  h2 {
-    font-size: 2rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  main p,
-  .widget-trigger {
-    font-size: 1rem;
-    line-height: 1.75em;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .center-wrap {
-    width: 90vw;
-    margin: auto;
-  }
-
-  .container.card-game {
-    width: 300px;
     height: auto;
   }
 
@@ -670,16 +772,16 @@ main p,
 /* smartphones */
 @media all and (max-width: 400px) {
 
-  body{
+  /* body{
     padding: 0;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .container.card-game {
+  .container.card-matching {
     width: 300px;
     height: auto;
-  }
+  } */
 
 }
 

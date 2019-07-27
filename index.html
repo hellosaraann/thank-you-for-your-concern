@@ -25,22 +25,19 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-
   <header>
   </header>
 
 
-  <div class='hero container column full-width'>
+  <div class='hero container column full-width space-evenly'>
     <h1 class='center-wrap'>Thank you for your concern.</h1>
-    <div class='down-arrow'></div>
+    <div class='moving-arrow'></div>
   </div>
 
 
   <main id='widgetApp' class='y mandatory-scroll-snapping'>
 
-
-    <div class='center-wrap highlight'>
+    <div class='center-wrap highlight content-section'>
       <p>
         Thank you for coming here. It means a lot that you came. We know that you have truly serious and deep feelings about this and that you are coming from a place of care for women and children. We know that for you this is a calling from God.
       </p>
@@ -50,13 +47,17 @@
     </div>
 
 
-    <div>
-      <div class='fixed-widget'>
-        <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
+    <div id='care-for-women' class='content-section full-width'>
+      <div class='fixed-widget container white-bg'>
+        <picture class='center-wrap'>
+          <img src="img/intended-pregnancies-us-infographic.jpg"
+          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." />
+        </picture>
       </div>
 
-      <div class='center-wrap'>
+      <div class='center-wrap text'>
         <h2>You care about us</h2>
+
         <blockquote>
           <p>
             We don’t pay enough attention to those things that can be catastrophic for women.
@@ -78,24 +79,30 @@
       </div>
     </div>
 
-    <div id='infographicApp'>
-      <div class='fixed-widget'>
-        <picture><img src="img/intended-pregnancies-us-infographic.jpg" alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." /></picture>
+
+    <div id='care-for-children' class='content-section full-width'>
+      <div class='fixed-widget container white-bg'>
+        <picture class='center-wrap'>
+          <img src="img/intended-pregnancies-us-infographic.jpg"
+          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended." />
+        </picture>
       </div>
-      <a class='center-wrap' id='infographic-trigger'>
+
+      <div class='center-wrap text'>
         <h2>You care about our children</h2>
-      </a>
-      <p class='center-wrap highlight'>
-        75% of us are at or below the poverty line. A majority of us make this hard choice because we cannot afford financially to have another child or children. 60% of us already have another child. (Percentage of babies given up for adoption that stay in orphanages?)
-      </p>
+        <p class='highlight'>
+          75% of us are at or below the poverty line. A majority of us make this hard choice because we cannot afford financially to have another child or children. 60% of us already have another child. (Percentage of babies given up for adoption that stay in orphanages?)
+        </p>
+      </div>
     </div>
 
 
-    <div id='gameApp' class='fixed-widget container side-by-side'>
-      <div class='app-info'>
-        <h2>Fact or Fiction?</h2>
-        <p>Many hard rumors and prejudices cloud this debate.</br>
-        Match each heartfelt concern with its corresponding response.</p>
+    <div id='matching-tool' class='content-section fixed-widget container side-by-side dark-bg'>
+      <div class='text side-info'>
+        <h2>Two Sides</h2>
+        <p>
+          Many hard rumors and prejudices cloud this debate. Match each heartfelt concern with its corresponding response.
+        </p>
         <h5
           v-bind:matching-message='matchingMessage'>
           {{ matchingMessage }}
@@ -108,7 +115,7 @@
         </button>
       </div>
 
-        <div class='card-game center-wrap'>
+        <div class='card-matching'>
           <single-card
             v-for='(card, index, text, selected) in cards'
             v-bind:card-face='card.cardFace'
@@ -125,13 +132,11 @@
     </div>
 
 
-    <div id='timelineApp'>
-      <a class='widget-trigger center-wrap' id='timeline-trigger'>
-        <h2>A symptom of our times?</h2>
-      </a>
-      <p class='center-wrap highlight'>
-        Abortion has been well documented for over 4,000 years. It was commonly legal until the ‘quickening’, when a woman could feel the child moving in the womb, and was commonly  practiced by midwives. Legality was challenged for political reasons, for the business of pharmacology, and for control over women.
-      </p>
+    <div id='timelineApp' class='orange-bg column content-section'>
+      <div class='side-by-side text'>
+        <h2>A symptom of today?</h2>
+        <h5>The practice of abortion has been documented for over 4,000 years.</h5>
+      </div>
 
       <div class='widget container horizontal-scrolling-section' id='timeline-widget'>
         <timeline-entry
@@ -145,14 +150,14 @@
     </div>
 
 
-    <div>
-      <a class='center-wrap' id='story-trigger'>
+    <div id='final-plea' class='content-section'>
+      <div class='text'>
         <h2>In conclusion</h2>
-      </a>
-      <p class='center-wrap highlight'>
-        A few remaining things to say, using voices and words of people affected by this debate.
-      </p>
-      <div class='fixed-widget container' id='storyWidget'>
+        <h5 class='center-wrap highlight'>
+          A final ask, featuring voices and words of people affected by this debate.
+        </h5>
+      </div>
+      <div class='fixed-widget container'>
         <picture class='center-wrap'>
           <img src="img/plea-to-critics-thumbnail.jpg" alt="Video plea to critics — Dear stranger" />
         </picture>
