@@ -110,7 +110,7 @@
     </div>
 
 
-    <div id='matching-tool' class='content-section container dark-bg full-height'>
+    <div id='matching-tool' class='content-section wideset-container dark-bg'>
       <div class='text item item-1-3'>
         <h2 class='left-align'>Two Sides</h2>
         <p>
@@ -147,18 +147,17 @@
 
 
     <div id='timelineApp' class='orange-bg content-section'>
-      <div >
+      <div class='wideset-container'>
         <div class='item text'>
           <h2 class='left-align'>A symptom of today?</h2>
           <h5 class='left-align'>The practice of abortion has been documented for over 4,000 years.</h5>
         </div>
-
+        <div class='img-item item'>
+          <div class='right moving-arrow'></div>
+        </div>
       </div>
 
       <div class='container widget horizontal-scrolling' id='timeline-widget'>
-        <div class='img-item item-1-2'>
-          <div class='right moving-arrow'></div>
-        </div>
         <timeline-entry
           v-for='event in events'
           v-bind:timeline-photo='event.timelinePhoto'
