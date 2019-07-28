@@ -733,6 +733,7 @@ div#care-for-women {
     height: 100vh;
     margin: 0;
     position: relative;
+    background-size: contain;
   }
 
   .card-matching {
