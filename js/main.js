@@ -122,7 +122,7 @@ const cardArray = [{
      'index': 8 ,
      'issue': 'promiscuity',
      'text': '?',
-     'cardFace': 'img/matching-promiscuity-stereotype.png',
+     'cardFace': 'img/matching-promiscuity-myth.png',
      'selected': 'unselected',
      'winning': false
     },{

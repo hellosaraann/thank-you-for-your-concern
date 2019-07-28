@@ -296,6 +296,13 @@ footer.page-footer {
   background-color: #F4E5B4;
   color: #151E3D;
   border-radius: 30px;
+  background-image: url('../img/matching-heart-blue.png');
+}
+
+.card.unselected.myth {
+  background-color: #F4E5B4;
+  color: #151E3D;
+  border-radius: 30px;
   background-image: url('../img/matching-heart-bg.png');
 }
 
@@ -716,6 +723,10 @@ div#care-for-women {
 
   .widget.content-section .container {
     flex-wrap: wrap;
+  }
+
+  .card-matching {
+    max-width: 600px;
   }
 
   #final-plea {

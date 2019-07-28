@@ -114,7 +114,7 @@
       <div class='text item item-1-3'>
         <h2 class='left-align'>Two Sides</h2>
         <p>
-          Many hard rumors and prejudices cloud this debate. Match each heartfelt concern with its corresponding response.
+          Many hard rumors and prejudices cloud this debate. Match each heartfelt concern (orange) with its corresponding response (blue).
         </p>
         <h5
           v-bind:matching-message='matchingMessage'>
@@ -135,6 +135,7 @@
           v-bind:index='card.index'
           v-beind:text='card.text'
           v-bind:class='{
+            myth: card.cardFace.toLowerCase().includes("myth"),
             unselected: card.selected === "unselected",
             matched: card.selected === "matched",
             winning: card.winning === true
