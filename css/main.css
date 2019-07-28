@@ -796,11 +796,11 @@ div#care-for-women {
     padding: 1rem 0;
   }
 
-  .card {
+  /* .card {
     width: 105px;
     height: 105px;
     margin: .25rem;
-  }
+  } */
 
   .card-matching {
     width: 500px;
@@ -840,7 +840,7 @@ div#care-for-women {
 
 /* smartphones */
 @media all and (max-width: 430px) {
-/* 
+/*
   .card {
     width: 80px;
     height: 80px;
