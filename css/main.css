@@ -210,7 +210,7 @@ main {
   padding: .5em 5rem .5rem 0;
   overflow-x: auto;
   background-color: #EF7240;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
 }
 
 .left-align.text-item {

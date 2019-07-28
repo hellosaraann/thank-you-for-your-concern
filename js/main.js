@@ -11,12 +11,12 @@ const timelineArray = [{
     text: 'The earliest record of abortion appears in 3000 BCE, in the Royal Archives of China. In the 1500s BCE, Ancient Egyptian medical texts define herbal recipes for contraceptive methods and spermacides.',
     factCite: 1
   },{
-    timelinePhoto: 'img/fragment_of_Hippocratic_oath.png',
+    timelinePhoto: 'img/fragment_of_Hippocratic_oath.jpg',
     year: '400s BCE',
     text: 'The Hippocratic Oath was written in Ancient Greece, where abortions were legal. Sources disagree on whether the original text vowed not to give women "an abortive pessary" or "a destructive pessary", alluding to the dangerous infections caused by a soaked piece of wool. After the fall of Greece and the school of Hippocrates, the Oath was rediscovered by Christian scholars and began to be used again in 1508CE. By 1750, it had been translated into European languages and was widely recited.',
     factCite: 4
   },{
-    timelinePhoto: 'img/coin-silphium-cyrenne.png',
+    timelinePhoto: 'img/coin-silphium-cyrenne.jpg',
     year: '300s BCE',
     text: 'Philosophers like Plato and Aristotle write openly about birth control and contraceptives. Use of contraceptive and abortive herbs, silphium, birthwort, and "the chaste tree" is well documented in Ancient Greece, Egypt, and Northern Africa. Exports of silphium make the African colony Cyrenne rich, and eventually turn the plant extinct. ',
     factCite: 1
@@ -36,7 +36,7 @@ const timelineArray = [{
     text: 'The “Comstock Law” criminalized contraception and abortion, and information in the United States, except when a physician deemed either was necessary. With the passage of this law, women lost what had been their common law right.',
     factCite: 1
   },{
-    timelinePhoto: 'https://via.placeholder.com/400x300/#999999/#EFEEE3/?text=placeholder',
+    timelinePhoto: 'img/sanger-on-court-steps.jpg',
     year: '1930s',
     text: 'The American Birth Control League was started by Margaret Sanger and quickly grew to over 500 birth control clinics throughout the United States. Abortions in the United States increased with economic pressures to over 681,000 each year inciting many physicians to become abortion specialists. In addition to numerous physicians in New York City, underground clinics were established on the West Coast. Contraceptive devices and condoms were available at pharmacies and gas stations.',
     factCite: 1
