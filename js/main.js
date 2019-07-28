@@ -194,7 +194,7 @@ Vue.component ( 'timeline-entry', {
 	],
 	template: `
 			<div class='container column horizontal-scroll'>
-				<div class='timeline-image-placeholder'>
+				<div>
           <img v-bind:src='timelinePhoto' class='timeline-photo'/>
         </div>
         <h4>{{ year }}</h4>

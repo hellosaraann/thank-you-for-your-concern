@@ -690,6 +690,7 @@ div#care-for-women {
   }
 
   .text,
+  .item,
   .item-2-3,
   .item-1-3,
   .img-item {
@@ -786,6 +787,26 @@ div#care-for-women {
     height: 100vh;
   }
 
+  .img-item .moving-arrow {
+    border: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 50%;
+  }
+
+  .wideset-container,
+  .wideset-container h5 {
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+
+  .widget.horizontal-scrolling {
+    padding: 0 .5rem;
+  }
+
   .text,
   .item,
   .img-item,
@@ -793,20 +814,26 @@ div#care-for-women {
   .item-1-2,
   .item-2-3 {
     margin: auto;
-    max-width: 100vw;
+    width: 90vw;
+    padding: 1rem 0;
+  }
+
+  ,
+  .horizontal-scroll {
+    margin: auto;
+    width: 80vw;
     padding: 1rem 0;
   }
 
   .card {
-    width: 105px;
-    height: 105px;
+    width: 100px;
+    height: 100px;
     margin: .25rem;
   }
 
   .card-matching {
-    width: 500px;
     max-width: 98vw;
-    margin: 0 0 2rem 0;
+    margin: 0 auto;
     padding: 0;
   }
 
