@@ -1,9 +1,29 @@
-const widgetArray = [
-  {id: '#timelineWidget'},
-  {id: '#infographicWidget'},
-  {id: '#gameWidget'},
-  {id: '#storyWidget'}
-];
+/*
+SLIDE ARRAY
+- infographic images
+- fed into infographic component
+*/
+
+const slideArray = [{
+  'infographics': 'img/infographics.jpg'
+},{
+  'infographics': 'img/intended-pregnancies-us-infographic.jpg'
+},{
+  'infographics': 'img/infographics3.jpg'
+},{
+  'infographics': 'img/infographics4.jpg'
+},{
+  'infographics': 'img/infographics5.jpg'
+},{
+  'infographics': 'img/infographics6.jpg'
+}];
+
+
+/*
+TIMELINE ARRAY
+- photos, data and citations
+- fed into timeline-entry component
+*/
 
 const timelineArray = [{
     timelinePhoto: 'img/13c-pennyroyal-herbal-abortive.jpg',
@@ -70,12 +90,12 @@ CARD ARRAY
 */
 
 const cardArray = [{
-   'index': 1 ,
-   'issue': 'breast-cancer',
-   'text': '?',
-   'cardFace': 'img/matching-breast-cancer-myth.png',
-   'selected': 'unselected',
-   'winning': false
+    'index': 1 ,
+    'issue': 'breast-cancer',
+    'text': '?',
+    'cardFace': 'img/matching-breast-cancer-myth.png',
+    'selected': 'unselected',
+    'winning': false
   },{
     'index': 2 ,
     'issue': 'breast-cancer',
@@ -84,33 +104,33 @@ const cardArray = [{
     'selected': 'unselected',
     'winning': false
   },{
-   'index': 3 ,
-   'issue': 'federal-funding',
-   'text': '?',
-   'cardFace': 'img/matching-federal-funding-myth.png',
-   'selected': 'unselected',
-   'winning': false
+    'index': 3 ,
+    'issue': 'federal-funding',
+    'text': '?',
+    'cardFace': 'img/matching-federal-funding-myth.png',
+    'selected': 'unselected',
+    'winning': false
   },{
-   'index': 4 ,
-   'issue': 'federal-funding',
-   'text': '?',
-   'cardFace': 'img/matching-federal-funding-truth.png',
-   'selected': 'unselected',
-   'winning': false
+    'index': 4 ,
+    'issue': 'federal-funding',
+    'text': '?',
+    'cardFace': 'img/matching-federal-funding-truth.png',
+    'selected': 'unselected',
+    'winning': false
   },{
-   'index': 5 ,
-   'issue': 'sex-ed',
-   'text': '?',
-   'cardFace': 'img/matching-sex-ed-truth.png',
-   'selected': 'unselected',
-   'winning': false
- },{
-   'index': 6 ,
-   'issue': 'sex-ed',
-   'text': '?',
-   'cardFace': 'img/matching-sex-ed-myth.png',
-   'selected': 'unselected',
-   'winning': false
+    'index': 5 ,
+    'issue': 'sex-ed',
+    'text': '?',
+    'cardFace': 'img/matching-sex-ed-truth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 6 ,
+    'issue': 'sex-ed',
+    'text': '?',
+    'cardFace': 'img/matching-sex-ed-myth.png',
+    'selected': 'unselected',
+    'winning': false
   },{
     'index': 7 ,
     'issue': 'promiscuity',
@@ -118,70 +138,93 @@ const cardArray = [{
     'cardFace': 'img/matching-promiscuity-truth.png',
     'selected': 'unselected',
     'winning': false
-   },{
-     'index': 8 ,
-     'issue': 'promiscuity',
+  },{
+    'index': 8 ,
+    'issue': 'promiscuity',
+    'text': '?',
+    'cardFace': 'img/matching-promiscuity-myth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 9 ,
+    'issue': 'imagery',
+    'text': '?',
+    'cardFace': 'img/matching-photos-truth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 10 ,
+    'issue': 'imagery',
+    'text': '?',
+    'cardFace': 'img/matching-photos-myth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 11 ,
+    'issue': 'good-evil',
+    'text': '?',
+    'cardFace': 'img/matching-good-v-evil-truth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 12 ,
+    'issue': 'good-evil',
+    'text': '?',
+    'cardFace': 'img/matching-good-v-evil-myth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 13 ,
+    'issue': 'dangerous',
+    'text': '?',
+    'cardFace': 'img/matching-danger-myth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 14 ,
+    'issue': 'dangerous',
+    'text': '?',
+    'cardFace': 'img/matching-danger-truth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+    'index': 15 ,
+    'issue': 'birth-control',
+    'text': '?',
+    'cardFace': 'img/matching-birth-control-myth.png',
+    'selected': 'unselected',
+    'winning': false
+  },{
+     'index': 16 ,
+     'issue': 'birth-control',
      'text': '?',
-     'cardFace': 'img/matching-promiscuity-myth.png',
+     'cardFace': 'img/matching-birth-control-truth.png',
      'selected': 'unselected',
      'winning': false
-    },{
-      'index': 9 ,
-      'issue': 'imagery',
-      'text': '?',
-      'cardFace': 'img/matching-photos-truth.png',
-      'selected': 'unselected',
-      'winning': false
-     },{
-       'index': 10 ,
-       'issue': 'imagery',
-       'text': '?',
-       'cardFace': 'img/matching-photos-myth.png',
-       'selected': 'unselected',
-       'winning': false
-      },{
-        'index': 11 ,
-        'issue': 'good-evil',
-        'text': '?',
-        'cardFace': 'img/matching-good-v-evil-truth.png',
-        'selected': 'unselected',
-        'winning': false
-       },{
-         'index': 12 ,
-         'issue': 'good-evil',
-         'text': '?',
-         'cardFace': 'img/matching-good-v-evil-myth.png',
-         'selected': 'unselected',
-         'winning': false
-        },{
-          'index': 13 ,
-          'issue': 'dangerous',
-          'text': '?',
-          'cardFace': 'img/matching-danger-myth.png',
-          'selected': 'unselected',
-          'winning': false
-         },{
-           'index': 14 ,
-           'issue': 'dangerous',
-           'text': '?',
-           'cardFace': 'img/matching-danger-truth.png',
-           'selected': 'unselected',
-           'winning': false
-          },{
-            'index': 15 ,
-            'issue': 'birth-control',
-            'text': '?',
-            'cardFace': 'img/matching-birth-control-myth.png',
-            'selected': 'unselected',
-            'winning': false
-           },{
-             'index': 16 ,
-             'issue': 'birth-control',
-             'text': '?',
-             'cardFace': 'img/matching-birth-control-truth.png',
-             'selected': 'unselected',
-             'winning': false
-            }];
+  }];
+
+
+/*
+SLIDE ARRAY
+- infographic images
+- fed into infographic component
+*/
+
+Vue.component ( 'infographic-slider', {
+	props: [
+		'infographics'
+	],
+	template: `
+    <div
+      v-if="show"
+      :key="current"
+      class="slide"
+      :class="slides[current].className">
+        <img v-bind:src='slides[current].infographics'/>
+    </div>
+  `
+});
+
 
 /*
 TIMELINE ENTRY COMPONENT
@@ -224,11 +267,35 @@ Vue.component ( 'single-card', {
 	`
 });
 
+var slider = new Vue({
+  el: "#slider",
+  data: {
+    current: 0,
+    direction: 1,
+    transitionName: "fade",
+    show: false,
+    slides: slideArray
+  },
+  methods: {
+    slide(dir) {
+      this.direction = dir;
+      dir === 1
+        ? (this.transitionName = "slide-next")
+        : (this.transitionName = "slide-prev");
+      var len = this.slides.length;
+      this.current = (this.current + dir % len + len) % len;
+    }
+  },
+  mounted() {
+    this.show = true;
+  }
+});
+
+
 var vm = new Vue ({
-  el: '#widgetApp',
+  el: '#matchingTool',
   data: {
     matchingMessage: 'Click two cards at a time to reveal.',
-    widgets: widgetArray,
     events: timelineArray,
     cards: cardArray,
     selectedCards: [],
@@ -295,6 +362,14 @@ var vm = new Vue ({
     // allows cards to appear randomized when page loads
     this.shuffleCards();
   }
+});
+
+var vm = new Vue ({
+  el: '#timelineApp',
+  data: {
+    events: timelineArray
+  },
+
 });
 
 
