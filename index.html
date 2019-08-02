@@ -54,7 +54,7 @@
     </div>
 
 
-    <div id='care-for-women' class='white-bg content-section container'>
+    <div id='care-for-women' class='white-bg content-section'>
       <div class='text item'>
         <h2>You care about us</h2>
         <blockquote>
@@ -69,40 +69,29 @@
           The United States has the highest rising maternal mortality rate of any of the developed nations by far, with American mothers nearly three to seven times more likely to die from causes related to childbirth than other developed nations.<sup>10</sup> Of the Title V program supporting maternal & child health, 78% goes to infants and special needs children, and 6% goes to mothers. Medicaid, while the ACA still stands, covers mothers for 60 days postpartum, and infants one year. In some cases students are allowed to complete their training as maternal-fetal specialists without having even been to the delivery room, such is the focus placed on the child.<sup>9</sup>
         </p>
       </div>
-    </div>
 
-    <div class='white-bg widget content-section'>
-      <div class='container'>
-        <div id="slider">
-          <infographic-slider
-              tag="div"
-              :name="transitionName"
-              class="slides-group">
-            </infographic-slider>
-            <div
-              class="slider-btn btn-prev"
-              aria-label="Previous slide"
-              @click="slide(-1)">
-              &#10094;
-            </div>
-            <div
-              class="slider-btn btn-next"
-              aria-label="Next slide"
-              @click="slide(1)">
-              &#10095;
-            </div>
-          </div>
-        <div class='text item item-1-3'>
-          <p>
-            In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
-          </p>
-        </div>
+      <div id="slider">
+        <infographic-slider
+          v-for='(slide, id, caption, imageDescription) in slides'
+          v-if='slide.id === (Math.abs(current) % slides.length)'
+          v-bind:key='slide.id'
+          v-bind:infographics='slide.infographics'
+          v-bind:image-description='slide.imageDescription'
+          v-bind:caption='slide.caption'
+        ></infographic-slider>
+      </div>
+
+      <div class='text item'>
+        <p>
+          In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
+        </p>
       </div>
       <div class='text item'>
         <p>
           Rates of abortion are nearly equal in countries where the practice is outlawed and in countries where it is allowed (29% vs. 27%, respectively).<sup>7</sup> Legal abortion has exponentially increased the safety of the practice through quality control and because people have them earlier (25% were 13 weeks or later in 1970, compared with 12% today). When abortion is outlawed, mothers are increasingly jailed and investigated for natural miscarriages, and maternal mortality rate rises as much as 8-11% due to things like refusal of life-saving medication in case it harms the fetus, not stopping ectopic pregnancies, and increased suicide rates especially in the young.<sup>6</sup>
         </p>
       </div>
+
     </div>
 
 
@@ -145,10 +134,10 @@
 
       <div class='card-matching item item-1-2'>
         <single-card
-          v-for='(card, index, text, selected) in cards'
+          v-for='(card, index, selected, imageDescription) in cards'
           v-bind:card-face='card.cardFace'
+          v-bind:image-description='card.imageDescription'
           v-bind:index='card.index'
-          v-beind:text='card.text'
           v-bind:class='{
             myth: card.cardFace.toLowerCase().includes("myth"),
             unselected: card.selected === "unselected",
@@ -179,6 +168,7 @@
         <timeline-entry
           v-for='event in events'
           v-bind:timeline-photo='event.timelinePhoto'
+          v-bind:image-description='event.imageDescription'
           v-bind:year='event.year'
           v-bind:text='event.text'
           v-bind:fact-cite='event.factCite'
