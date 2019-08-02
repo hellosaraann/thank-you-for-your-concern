@@ -70,29 +70,35 @@
         </p>
       </div>
 
-      <div id="slider">
-        <infographic-slider
-          v-for='(slide, id, caption, imageDescription) in slides'
-          v-if='slide.id === (Math.abs(current) % slides.length)'
-          v-bind:key='slide.id'
-          v-bind:infographics='slide.infographics'
-          v-bind:image-description='slide.imageDescription'
-          v-bind:caption='slide.caption'
-        ></infographic-slider>
-      </div>
+      <div id="slider" class='infographics container widget white-bg'>
 
-      <div class='text item'>
-        <p>
-          In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
-        </p>
-      </div>
-      <div class='text item'>
-        <p>
-          Rates of abortion are nearly equal in countries where the practice is outlawed and in countries where it is allowed (29% vs. 27%, respectively).<sup>7</sup> Legal abortion has exponentially increased the safety of the practice through quality control and because people have them earlier (25% were 13 weeks or later in 1970, compared with 12% today). When abortion is outlawed, mothers are increasingly jailed and investigated for natural miscarriages, and maternal mortality rate rises as much as 8-11% due to things like refusal of life-saving medication in case it harms the fetus, not stopping ectopic pregnancies, and increased suicide rates especially in the young.<sup>6</sup>
-        </p>
-      </div>
+        <div
+          class='white-bg item item-1-2 slide'
+          v-on:mouseover='stopRotation'
+          v-on:mouseout='startRotation'
+        >
+          <div v-on:click='previous' class='arrow-btn'></div>
+          <div v-on:click='next' class='right arrow-btn'></div>
 
-    </div>
+          <infographic-slider
+            v-for='(slide, id, imageDescription) in slides'
+            v-if='slide.id === (Math.abs(current) % slides.length)'
+            v-bind:key='slide.id'
+            v-bind:infographics='slide.infographics'
+            v-bind:image-description='slide.imageDescription'
+          ></infographic-slider>
+        </div>
+
+        <div class='text item item-1-2'>
+          <p>
+            In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
+          </p>
+          <p>
+            Rates of abortion are nearly equal in countries where the practice is outlawed and in countries where it is allowed (29% vs. 27%, respectively).<sup>7</sup> Legal abortion has exponentially increased the safety of the practice through quality control and because people have them earlier (25% were 13 weeks or later in 1970, compared with 12% today). When abortion is outlawed, mothers are increasingly jailed and investigated for natural miscarriages, and maternal mortality rate rises as much as 8-11% due to things like refusal of life-saving medication in case it harms the fetus, not stopping ectopic pregnancies, and increased suicide rates especially in the young.<sup>6</sup>
+          </p>
+        </div>
+
+      </div>
 
 
     <div id='care-for-children' class='content-section widget'>

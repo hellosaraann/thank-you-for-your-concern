@@ -5,32 +5,32 @@
 
 const slideArray = [{
   id: 0,
-  caption: 'Some text',
+  caption: 'Walk a mile in someone else\'s shoes',
   infographics: 'img/infographics.jpg',
   imageDescription: 'Infographic: 1 in 4 women in the U.S. will have an abortion by the time she is 45.'
 },{
   id: 1,
-  caption: 'Some text',
+  caption: 'Step into our homes: Intended pregnancies in the U.S. per year',
   infographics: 'img/intended-pregnancies-us-infographic.jpg',
   imageDescription: 'Infographic: tbd.'
 },{
   id: 2,
-  caption: 'Some text',
+  caption: 'Step into our homes: our reasons',
   infographics: 'img/infographics3.jpg',
   imageDescription: 'Infographic: tbd.'
 },{
   id: 3,
-  caption: 'Some text',
+  caption: 'Rates where its banned vs. legal',
   infographics: 'img/infographics4.jpg',
   imageDescription: 'Infographic: tbd.'
 },{
   id: 4,
-  caption: 'Some text',
+  caption: 'Effect of Bans on Abortion Rates',
   infographics: 'img/infographics5.jpg',
   imageDescription: 'Infographic: tbd.'
 },{
   id: 5,
-  caption: 'Some text',
+  caption: 'Effects of bans and TRAP laws internationally and nationally',
   infographics: 'img/infographics6.jpg',
   imageDescription: 'Infographic: tbd.'
 }];
@@ -256,20 +256,14 @@ SLIDE ARRAY
 
 Vue.component ( 'infographic-slider', {
 	props: [
-		'slides' , 'infographics' , 'id' , 'caption' , 'current' , 'imageDescription'
+		'slides', 'infographics', 'id', 'imageDescription'
 	],
 	template: `
-    <div class='container widget full-width white-bg'>
-
-      <div  class='item item-2-3'>
-        <img v-bind:src='infographics' v-bind:alt='imageDescription' class='img-item'/>
-      </div>
-
-      <div class='item item-1-3 text-item'>
-        <p>{{ caption }}</p>
-      </div>
-
-    </div>
+      <img
+        v-bind:src='infographics'
+        v-bind:alt='imageDescription'
+        class='item img-item'
+      />
   `
 });
 
@@ -329,7 +323,7 @@ var slider = new Vue({
   el: "#slider",
 
   data: {
-    current: 1,
+    current: 0,
     slides: slideArray,
     timer: null
   },
