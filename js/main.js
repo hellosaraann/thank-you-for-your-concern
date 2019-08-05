@@ -57,7 +57,7 @@ const timelineArray = [{
   },{
     timelinePhoto: 'img/coin-silphium-cyrenne.jpg',
     year: '300s BCE',
-    text: 'Philosophers like Plato and Aristotle write openly about birth control and contraceptives. Use of contraceptive and abortive herbs, silphium, birthwort, and "the chaste tree" is well documented in Ancient Greece, Egypt, and Northern Africa. Exports of silphium make the African colony Cyrenne rich, and eventually turn the plant extinct. ',
+    text: 'Philosophers like Plato and Aristotle write openly about birth control and contraceptives. Use of contraceptive and abortive herbs, silphium, birthwort, and "the chaste tree" is well documented in Ancient Greece, Egypt, and Northern Africa. Silphium is so popular that exports make the African colony Cyrenne rich, and make the plant extinct. ',
     factCite: 1,
     imageDescription: 'Image of the two sides of the coin of Cyrenne'
   },{
@@ -69,7 +69,7 @@ const timelineArray = [{
   },{
     timelinePhoto: 'img/Pope_Pius_IX_surrounded_by_clerics.jpg',
     year: 1869,
-    text: 'Led by Pope Pius IX, the Catholic Church condemns abortion for all stages of pregnancy. Previously abortion before "ensoulment of the fetus" at "thirty days after conception" was not thought to be a sin.',
+    text: 'Led by Pope Pius IX, the Catholic Church condemns abortion for all stages of pregnancy. Previously abortion before "ensoulment of the fetus" at "thirty days after conception" had not been considered a sin.',
     factCite: '1,17',
     imageDescription: 'xxx'
   },{
@@ -392,7 +392,7 @@ var vm = new Vue ({
               this.selectedCards[0].text = this.selectedCards[1].text =
                 '';
               this.selectedCards[0].selected = this.selectedCards[1].selected= 'matched';
-              this.matchingMessage = 'You found a match. Keep going.';
+              this.matchingMessage = 'You found a match. Thank you for playing. We hope you\'ll try and find some more.';
               this.matchedCards.push(this.selectedCards[0], this.selectedCards[1]);
               this.selectedCards.pop();
               this.selectedCards.pop();

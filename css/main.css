@@ -114,7 +114,7 @@ textarea {
 /* GENERAL — structure */
 
 body {
-  background-color: #EFEEE2;
+  background-color: #EFEEE3;
   font-family: 'Lora', serif;
   font-size: 18px;
   line-height: 1.75em;
@@ -166,7 +166,7 @@ main {
 
 .item {
   box-sizing: border-box;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
   margin: auto;
 }
 
@@ -233,29 +233,6 @@ footer.page-footer {
   height: auto;
 }
 
-/* WIDGETS SPECIFICS — widget trigger (? to be deleted ?) */
-
-.widget-trigger {
-  font-weight: bolder;
-  display: block;
-  width: 100%;
-  position: sticky;
-}
-
-.widget-trigger:focus,
-.widget-trigger:hover {
-  font-weight: 900;
-}
-
-/* .widget-trigger:hover + .widget,
-.widget-trigger:focus + .widget,
-.widget:hover,
-.widget:focus {
-    height: auto;
-    padding: 4em;
-    opacity: 1;
-    transition: opacity 2s ease-in-out .25s;
-} */
 
 /* WIDGET SPECIFICS – infographics */
 
@@ -288,8 +265,8 @@ footer.page-footer {
   box-sizing: border-box;
   max-width: 400px;
   min-width: 25em;
-  margin: .5rem 2rem;
-  padding: 2rem;
+  margin: 0 2rem;
+  padding: 0 2rem;
   scroll-snap-align: center;
 }
 
@@ -350,14 +327,12 @@ footer.page-footer {
   background-color: #161E39;
   color: #C8C9C1;
   background-image: url('../img/floral-header.svg');
-  /* background-image: url('../img/thank-you-for-your-concern-floral-header.svg'); */
   background-position: center center;
   background-attachment: fixed;
 }
 
 img.timeline-photo  {
   width: auto;
-  max-width: 350px;
   max-height: 250px;
   margin: 1rem;
 }
@@ -384,6 +359,10 @@ img {
 
 .orange-bg p {
   color: #020306;
+}
+
+.green-bg {
+  background-color: #B7B976;
 }
 
 /* GENERAL — typography */
@@ -499,7 +478,7 @@ blockquote {
   margin: 0;
   background-image: url(../img/quote-marks.svg), url(../img/close-quote-marks.svg);
   background-repeat: no-repeat, no-repeat;
-  background-position: top left, center right;
+  background-position: top left, bottom 25% right;
   background-size: 120px, 120px;
 }
 
@@ -538,6 +517,10 @@ footer p {
   font-weight: normal;
   line-height: 1.5em;
   font-size: .9rem;
+}
+
+.citation li {
+  padding-bottom: 1.75em;
 }
 
 .caption {
@@ -640,7 +623,7 @@ footer p {
 
 /* added illustrations */
 
-div#care-for-women {
+.flower {
   background-image: url(../img/black-eyed-susan-rotated.svg), url(../img/black-eyed-susan.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom right, top left;
@@ -898,7 +881,7 @@ div#care-for-women {
   .horizontal-scroll {
     margin: auto;
     width: 80vw;
-    padding: 1rem 0;
+    padding: 0;
   }
 
   .card {
@@ -927,7 +910,7 @@ div#care-for-women {
     padding: 3rem 2rem;
     background-image: url(../img/quote-marks.svg), url(../img/close-quote-marks.svg);
     background-repeat: no-repeat, no-repeat;
-    background-position: top left, right 0 bottom 30%;
+    background-position: top left, bottom right;
     background-size: 120px, 120px;
   }
 
