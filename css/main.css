@@ -166,7 +166,7 @@ main {
 
 .item {
   box-sizing: border-box;
-  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   margin: auto;
 }
 
@@ -424,6 +424,10 @@ h5, button {
 
 h5 em {
   font-weight: lighter;
+}
+
+.center {
+  text-align: center;
 }
 
 .dark-bg a {
