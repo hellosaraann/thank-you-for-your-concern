@@ -5,34 +5,36 @@
 
 const slideArray = [{
   id: 0,
-  caption: 'Walk a mile in someone else\'s shoes',
-  infographics: 'img/infographics.jpg',
+  infographics: 'img/1-in-4-women-have-abortions.jpg',
   imageDescription: 'Infographic: 1 in 4 women in the U.S. will have an abortion by the time she is 45.'
 },{
   id: 1,
-  caption: 'Step into our homes: Intended pregnancies in the U.S. per year',
-  infographics: 'img/intended-pregnancies-us-infographic.jpg',
-  imageDescription: 'Infographic: tbd.'
+  infographics: 'img/3-in-4-people-needing-abortions-poverty.jpg',
+  imageDescription: 'Infographic: 3 in 4 people seeking abortions are living at or under the poverty line.'
 },{
   id: 2,
-  caption: 'Step into our homes: our reasons',
-  infographics: 'img/infographics3.jpg',
-  imageDescription: 'Infographic: tbd.'
+  infographics: 'img/intended-pregnancies-us-infographic.jpg',
+  imageDescription: 'Infographic: Intended pregnancies in the U.S. per year.'
 },{
   id: 3,
-  caption: 'Rates where its banned vs. legal',
-  infographics: 'img/infographics4.jpg',
-  imageDescription: 'Infographic: tbd.'
+  infographics: 'img/intended-pregnancies-breakdown.jpg',
+  imageDescription: 'Infographic: Break down of unplanned pregnancies.'
 },{
   id: 4,
-  caption: 'Effect of Bans on Abortion Rates',
-  infographics: 'img/infographics5.jpg',
-  imageDescription: 'Infographic: tbd.'
+  infographics: 'img/why-abortion-reasons.jpg',
+  imageDescription: 'Infographic: Main reasons people cite for having an abortion.'
 },{
   id: 5,
-  caption: 'Effects of bans and TRAP laws internationally and nationally',
-  infographics: 'img/infographics6.jpg',
-  imageDescription: 'Infographic: tbd.'
+  infographics: 'img/bans-and-abortion-rates.jpg',
+  imageDescription: 'Infographic: Effect of Bans on Abortion Rates.'
+},{
+  id: 6,
+  infographics: 'img/countries-attitudes-abortion.jpg',
+  imageDescription: 'Infographic: Most extreme and most lenient policies on abortion, A-Z.'
+},{
+  id: 7,
+  infographics: 'img/abortion-bans-and-patients.jpg',
+  imageDescription: 'Infographic: Abortion bans\' and TRAP laws\' effect on women.'
 }];
 
 

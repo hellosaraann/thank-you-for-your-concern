@@ -9,8 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#2e5490">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#efeee3">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -54,7 +59,7 @@
     </div>
 
 
-    <div id='care-for-women' class='white-bg content-section flower'>
+    <div id='care-for-women' class='content-section flower'>
       <div class='text item'>
 
         <h2>Because you care
@@ -68,20 +73,31 @@
               Barbara Levy, VP of Health Policy and Advocacy at the American College of Obstetricians and Gynecologists.<sup>10</sup>
           </footer>
         </blockquote>
+
         <p>
-          The United States has the highest rising maternal mortality rate of any of the developed nations by far, with American mothers nearly three to seven times more likely to die from causes related to childbirth than other developed nations.<sup>10</sup> Of the Title V program supporting maternal & child health, 78% goes to infants and special needs children, and 6% goes to mothers. Medicaid, while the ACA still stands, covers mothers for 60 days postpartum, and infants one year. In some cases students are allowed to complete their training as maternal-fetal specialists without having even been to the delivery room, such is the focus placed on the child.<sup>9</sup>
+          <span class='intro-question'>Did you know?</span> The United States has the highest maternal mortality rate of any other developed nation — 3 to 7 times that of countries like Finland, France, Sweden, Portugal, and the U.K. — and we are the only developed nation where that rate is on the rise.<sup>10</sup> A disproportionate lack of research, funding and training nationally on maternal issues<sup>9</sup> suggests a systemic bias. The illegality of abortion in the United States was rather short lived, beginning in the mid-1800s and ending with Roe v. Wade in 1973. The ongoing denouncement in the Catholic Church also began relatively recently, in the mid-1800s <em>(though the Pope's recent admissions of obtaining abortions for nuns raped by priests might put the validity of this position into question)</em>.<sup>39</sup> Prior to that, abortion has a long documented history extending over 4000 years.<sup>1</sup> Termination of pregnancy is considered a human right by the United Nations, and lack of access to it is considered to be torture in cases of rape, incest, and risk of death for the mother.<sup>25</sup>
         </p>
+        <p>
+          <span class='intro-question'>What makes fewer abortions?</span> It’s not exposure to the church; 62% of people who have abortions nationally are religious, 54% are either Protestant, evangelical Protestant, or Catholic,<sup>5</sup> and some even picket clinics themselves.<sup>35</sup> It’s not laws; internationally, rates of abortion are near equal in countries with the most extreme restrictions and in those with the most lenient, even negligibly higher in the former.<sup>24</sup> It’s not shaming, stigma, threat of jail, or illness or death resulting from unsafe procedures.<sup>29</sup> What does reduce abortion? Sexual education and access to contraception is proven to lower rates.<sup>20,33</sup> One example, a program in Colorado that gave out free IUDs to women that wanted them, turned around a 35% drop in abortion rate and saved the public $80M in Medicaid costs, but the program was cut by Republican lawmakers due to pressure from Christian groups.<sup>34</sup>
+        </p>
+        <p>
+          <span class='intro-question'>In countries and states where the practice is banned or prevented, what happens?</span> Maternal mortality and incarceration rates increase. Maternal mortality is 8-11% higher<sup>22,23</sup> in states with extreme abortion restrictions like Louisiana, Georgia, and Texas,<sup>22</sup> and in countries with the most extremely restrictive policies, including Iraq, Honduras, and El Slavador <em>(With our country's long history with Afghanistan, and talking points surrounding its attitudes towards women, I feel the need to mention that the practice is even allowed there, at least to save a woman's life).</em><sup>7</sup> Some possible reasons for increased maternal mortality include complications from unsafe abortions, suicide, and doctor refusal to prescribe lifesaving medicine or surgery in case of risk to the fetus, such as in ectopic pregnancy.<sup>6</sup> More women are in jail in these states and countries, for abortion, but also for natural miscarriage wrongfully charged as abortion.<sup>23</sup>
+        </p>
+
       </div>
 
       <div id="slider" class='infographics container widget white-bg'>
 
+        <div v-on:click='previous' class='arrow-btn'></div>
+
+        <div v-on:click='next' class='right arrow-btn'></div>
+
         <div
           class='white-bg item item-2-3 slide'
           v-on:mouseover='stopRotation'
-          v-on:mouseout='startRotation'
-        >
-          <div v-on:click='previous' class='arrow-btn'></div>
-          <div v-on:click='next' class='right arrow-btn'></div>
+          v-on:mouseout='startRotation'>
+
+
 
           <infographic-slider
             v-for='(slide, id, imageDescription) in slides'
@@ -90,48 +106,38 @@
             v-bind:infographics='slide.infographics'
             v-bind:image-description='slide.imageDescription'
           ></infographic-slider>
-        </div>
 
-        <div class='text item item-1-3'>
-          <p>
-            In the U.S., 45% of pregnancies each year are unintended (27% wanted later, and 18% unwanted).<sup>5</sup> 75% of the reasons for not wanting to be pregnant included concern for or responsibility to other individuals; the inability to afford raising a child; and the belief that having a baby would interfere with work, school or the ability to care for dependents. 50% don’t want to be pregnant due to not wanting to raise a child alone or having problems with husband or partner.<sup>5</sup> Availability of birth control and education lower rates of abortion, and cause abortions that do happen to happen early, and safely.
-          </p>
-          <p>
-            Rates of abortion are nearly equal in countries where the practice is outlawed and in countries where it is allowed (29% vs. 27%, respectively).<sup>7</sup> Legal abortion has exponentially increased the safety of the practice through quality control and because people have them earlier (25% were 13 weeks or later in 1970, compared with 12% today). When abortion is outlawed, mothers are increasingly jailed and investigated for natural miscarriages, and maternal mortality rate rises as much as 8-11% due to things like refusal of life-saving medication in case it harms the fetus, not stopping ectopic pregnancies, and increased suicide rates especially in the young.<sup>6</sup>
-          </p>
         </div>
 
       </div>
     </div>
 
 
-    <div id='care-for-children' class='content-section widget white-bg flower'>
+    <div id='care-for-children' class='content-section widget flower'>
 
       <div class='text item'>
         <h2>Because you care
         </br>about our children</h2>
 
-        <blockquote>
-          <p>
-            I think in many cases, your morality is deeply lacking if all you want is a child born but not a child fed, a child educated, a child housed. And why would I think that you don't? Because you don't want any tax money to go there. That's not pro-life. That's pro-birth. We need a much broader conversation on what the morality of pro-life is.
-          </p>
-          <footer>
-            Benedictine Sister Joan Chittister<sup>31</sup>
-          </footer>
-        </blockquote>
-
       </div>
 
-      <div class='container'>
+      <div class='container wideset'>
 
         <p class='text item item-1-3'>
-          75% of us are at or below the poverty line, and 60% of us already have another child. A majority of us make this hard choice because we cannot afford financially to have another child or children. Republicans have a long history of cutting social welfare programs, like WIC, SNAP and others, and fight hard against raising the minimum wage. While some Crisis Pregnancy Centers help to set us up for Medicaid at least, or a rare few anti-abortion activists have paid for some to have our babies, aid stops post partum. Do you help support social programs that will help our families?
+          <span class='intro-question'>How do you show support for our children?</span> Three out of four of people seeking an abortion are at or below the poverty line<sup>5</sup> and make this difficult choice because they cannot financially afford a child or more children.<sup>13</sup> On average, one in five children live in poverty nationally, and in states with the most extreme abortion restrictions, the child-poverty rate can be as high as 28%.<sup>38</sup> Republicans have a long history of cutting social welfare programs,<sup>36</sup> and fighting hard against a raised minimum wage.<sup>37</sup> The President's proposed 2020 budget includes devastating cuts to Medicaid, SNAP, and other programs that help low-income children and their families get by. Families are struggling, and aid is scarce. Do you actively help support social programs that help children and their families to live?
         </p>
 
-        <img
-          src="img/intended-pregnancies-us-infographic.jpg"
-          alt="Graphic showing 55% of pregnancies in the U.S. are intended vs. 45% unintended."
-          class='infographics img-item item-1-2'/>
+        <div class='text item-2-3 item'>
+          <blockquote>
+            <p>
+              I think in many cases, your morality is deeply lacking if all you want is a child born but not a child fed, a child educated, a child housed. And why would I think that you don't? Because you don't want any tax money to go there. That's not pro-life. That's pro-birth. We need a much broader conversation on what the morality of pro-life is.
+            </p>
+            <footer>
+              Benedictine Sister Joan Chittister<sup>31</sup>
+            </footer>
+          </blockquote>
+        </div>
+
       </div>
 
     </div>
@@ -217,6 +223,10 @@
           allow="autoplay; fullscreen"
           allowfullscreen
         ></iframe>
+
+        <p class='caption right'>
+          Music by David Hilowitz.
+        </p>
 
       </div>
     </div>
