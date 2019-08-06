@@ -36,7 +36,7 @@
 
   <div class='hero container column'>
     <h1 class='item item-2-3'>Thank you for your concern.</h1>
-    <div>
+    <div class='arrow-house'>
       <div class='moving-arrow'></div>
     </div>
   </div>
@@ -121,7 +121,7 @@
 
       </div>
 
-      <div class='container wideset'>
+      <div class='wideset-container'>
 
         <p class='text item item-1-3'>
           <span class='intro-question'>How do you show support for our children?</span> Three out of four of people seeking an abortion are at or below the poverty line<sup>5</sup> and make this difficult choice because they cannot financially afford a child or more children.<sup>13</sup> On average, one in five children live in poverty nationally, and in states with the most extreme abortion restrictions, the child-poverty rate can be as high as 28%.<sup>38</sup> Republicans have a long history of cutting social welfare programs,<sup>36</sup> and fighting hard against a raised minimum wage.<sup>37</sup> The President's proposed 2020 budget includes devastating cuts to Medicaid, SNAP, and other programs that help low-income children and their families get by. Families are struggling, and aid is scarce. Do you actively help support social programs that help children and their families to live?
@@ -146,7 +146,7 @@
     <div id='matchingTool' class='content-section wideset-container dark-bg'>
       <div class='text item item-1-3'>
         <h2 class='left-align'>Two Sides</h2>
-        <p>
+        <p class='instructions'>
           Many hard rumors and prejudices cloud this debate. Match each heartfelt concern (orange) with its corresponding response (blue).
         </p>
         <h5
@@ -161,7 +161,7 @@
         </button>
       </div>
 
-      <div class='card-matching item item-1-2'>
+      <div class='card-matching'>
         <single-card
           v-for='(card, index, selected, imageDescription) in cards'
           v-bind:card-face='card.cardFace'
