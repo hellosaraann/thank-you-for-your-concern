@@ -281,7 +281,6 @@ footer.page-footer {
   flex-wrap: wrap;
   flex-grow: 0;
   width: 800px;
-  border:1px solid pink;
 }
 
 .card {
